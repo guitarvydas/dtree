@@ -31,7 +31,7 @@ I approach software Design in a Top-Down and Bottom-Up manner. First, I get an i
 
 # Progress Thus Far
 1. I pulled out a piece of code from the Forthish project that was giving me headaches. I know that I could have gotten the code working in the usual way by debugging, but, I drew myself a diagram of a decision tree.
-![Decision Tree](./xinterpret-dtree.drawio.png). 
+![Decision Tree](xinterpret-dtree.drawio.png). 
 The code and the drawing are quite short and looked like they would make for a good, very simple, example of transmogrification.
 I decided to code up a transmogrifiction pipeline and to convert the diagram to a working snippet of generated code.
 2. I got the first stage of transmogrification working about 5 hours after the first check-in of the code. I found it easier to manually write the OhmJS and RWR code using the `ohm-editor` and some `/bin/bash` scripts that employed the PBP and T2T tools.

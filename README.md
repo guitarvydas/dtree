@@ -2,7 +2,7 @@
 
 GOAL: compile the following diagram to executable code
 
-![decision tree for xinterpret()](./xinterpret-dtree.drawio.png)
+![decision tree for xinterpret()](./status/xinterpret-dtree.drawio.png)
 
 For example
 `diagram -> JSON -> Python`

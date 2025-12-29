@@ -29,10 +29,6 @@
       {
         "name": ":$ jq 'map(if has(\"cells\") then .cells |= map(.attributes | del(.drawio_id)) else . end)'",
         "id": 31
-      },
-      {
-        "name": ":$ jq '.[0].cells |= map(.attributes | del(.drawio_id))'",
-        "id": 35
       }
     ],
     "connections": [
