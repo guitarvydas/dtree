@@ -1,0 +1,42 @@
+example {
+  Main = "a" (";" "b")+ "c" "d"+
+  Top = "<mxfile" stuff* ">" Diagram+ "</mxfile>"
+  Diagram = "<diagram" Attribute+ ">" GraphModel "</diagram>"
+    
+  GraphModel = "<mxGraphModel" stuff+ ">" "<root>" Cell+ "</root>" "</mxGraphModel>"
+  Cell =
+    | "<mxCell" Attribute+ ">" Geometry? "</mxCell>" -- long
+    | "<mxCell" Attribute+ "/>" -- short
+
+  Geometry = 
+    | "<mxGeometry" Attribute+ ">" (~"</mxGeometry>" any)+ "</mxGeometry>" -- long
+    | "<mxGeometry" Attribute+ "/>" -- short
+
+  Attribute =
+    | "name" "=" string -- name
+    | "id" "=" mappedid -- id
+    | "parent" "=" mappedid -- parent
+    | "source" "=" mappedid -- source
+    | "target" "=" mappedid -- target
+    | "style" "=" "\"" styleattr+ "\"" -- style
+    | name "=" string -- other
+
+  styleattr =
+    | "edgeLabel" "=" "true" ";" -- edgelabel
+    | "value" "=" string ";" -- value
+    | "shape" "=" string ";" -- shape
+    | "edge" "=" "1" ";" -- edge
+    | "rhombus" ";" -- rhombus
+    | name "=" (name | number | points) ";" -- long
+    | name ";" -- short
+
+  number = digit+ frac?
+  frac = "." digit+
+  points = "[" (number ","?)* "]"
+  name = letter alnum*
+  stuff = ~">" ~"/>" ~">" any
+  string = "\"" schar+ "\""
+  mappedid = "\"" schar+ "\""
+  schar = ~"\"" any
+}
+

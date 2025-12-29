@@ -70,10 +70,10 @@ class Cell {
         this.mxgraphTarget = '';
         this.mxgraphParent = '';
         this.value = '';
-        this.id = undefined;
-        this.source = undefined;
-        this.target = undefined;
-        this.parent = undefined;
+        this.id = 0;
+        this.source = 0;
+        this.target = 0;
+        this.parent = 0;
         this.flags = new Set();
         this.type = CellType.Rect;
     }
@@ -304,53 +304,21 @@ function lintConnections(name, cells) {
     for (const cell of cells) {
         if (cell.type !== CellType.Arrow) continue;
 
-	if (cell.source === undefined) {
-            try {
-                console.error (`wire source unconnected in ${name} target="${cells[cells[cell.target].parent].value}"`);
-	    } catch (err) {
-                console.error (`wire source unconnected`);
-            }		    
-            ok = false;
-	    continue;
-        }
-	if (cell.target === undefined) {
-            try {
-                console.error (`wire target unconnected container=${name} source=${cells[cells[cell.source].parent].value}"`);
-            } catch (err) {
-		console.error (`wire target unconnected in ${name}`);
-	    }
-            ok = false;
-	    continue;
-        }
-	if (cell.id === undefined) {
-            console.error (`internal error: cell without id in ${name}`);
-            ok = false;
-	    continue;
-        }
-	if (cell.parent === undefined) {
-            console.error (`internal error: cell without parent in ${name}`);
-            ok = false;
-	    continue;
-        }
-        if (ok) {
-	    const sourcePort = cells[cell.source];
-	    const targetPort = cells[cell.target];
+        const sourcePort = cells[cell.source];
+        const targetPort = cells[cell.target];
 
-	    if ((sourcePort.type === CellType.Rhombus && sourcePort.parent === drawioTopIdx) ||
-		(sourcePort.type === CellType.Rect && (sourcePort.parent === drawioTopIdx || sourcePort.parent === drawioSecondIdx)) ||
-		(targetPort.type === CellType.Rhombus && targetPort.parent === drawioTopIdx) ||
-		(targetPort.type === CellType.Rect && (targetPort.parent === drawioTopIdx || targetPort.parent === drawioSecondIdx))) {
-
-		console.error(`suspicious (in ${name}) cell ${sourcePort.value}->${targetPort.value} in connection (port not contained by container?)`);
-		ok = false;
-	    }
-         }
+        if ((sourcePort.type === CellType.Rhombus && sourcePort.parent === drawioTopIdx) ||
+            (sourcePort.type === CellType.Rect && (sourcePort.parent === drawioTopIdx || sourcePort.parent === drawioSecondIdx)) ||
+            (targetPort.type === CellType.Rhombus && targetPort.parent === drawioTopIdx) ||
+            (targetPort.type === CellType.Rect && (targetPort.parent === drawioTopIdx || targetPort.parent === drawioSecondIdx))) {
+            
+            console.error(`suspicious (in ${name}) cell ${sourcePort.value}->${targetPort.value} in connection (port not contained by container?)`);
+            ok = false;
+        }
     }
 
     if (!ok) {
-	console.error ('********* quit: suspicious drawing ********');
-	process.exit (1);
-        //throw new Error('quit: suspicious drawing');
+        throw new Error('quit: suspicious drawing');
     }
 }
 

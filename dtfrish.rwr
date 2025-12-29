@@ -1,0 +1,18 @@
+% rewrite dt {
+  Main [YesNo] = ‛«YesNo»’
+
+  YesNo_meta [lb sym arg? y n rb] = ‛if («sym» «arg») {⤷«y»⤶\n} else {⤷«n»⤶\n}’
+  YesNo_expr [lb sym y n rb] = ‛if («sym») {⤷«y»⤶\n} else {⤷«n»⤶\n}’
+
+  YesBranch [_or _yes _ x] = ‛\n«x»’
+  NoBranch [_or _no _ x] = ‛\n«x»’
+
+  Process [_at proc lb param rb] = ‛\n%funcall «proc» («param»)’
+
+  Arg [lb name rb] = ‛(«name»)’
+  metaSymbol [_pct name] = ‛%«name»’
+  symbol [name] = ‛«name»’
+  actual [name] = ‛«name»’
+  processName [name] = ‛«name»’
+  name [letter alnum*] = ‛«letter»«alnum»’
+}

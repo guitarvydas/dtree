@@ -1,0 +1,2 @@
+#!/bin/bash
+./pbp/t2t.bash . ./pbp $1.ohm $2.rwr support.mjs -

@@ -1,0 +1,201 @@
+[
+  {
+    "type": "diagram",
+    "attributes": {
+      "id": "d2",
+      "name": "dtree",
+      "drawio_id": "brDq65to_PZeKpkbbApS"
+    },
+    "cells": [
+      {
+        "id": "c3"
+      },
+      {
+        "id": "c4",
+        "parent": "0"
+      },
+      {
+        "id": "c5",
+        "parent": "1",
+        "source": "zTViIhP_tUskBqKQNT3X-46",
+        "target": "dRkQnjKu9n-pmXYVSlKa-6",
+        "kind": "falseEdge"
+      },
+      {
+        "id": "c7",
+        "parent": "1",
+        "source": "zTViIhP_tUskBqKQNT3X-46",
+        "target": "dRkQnjKu9n-pmXYVSlKa-5",
+        "kind": "trueEdge"
+      },
+      {
+        "id": "c9",
+        "text": "float?",
+        "kind": "rhombus",
+        "parent": "1"
+      },
+      {
+        "id": "c10",
+        "text": "compile float",
+        "kind": "process",
+        "parent": "1"
+      },
+      {
+        "id": "c11",
+        "text": "error",
+        "kind": "process",
+        "parent": "1"
+      }
+    ]
+  },
+  {
+    "type": "diagram",
+    "attributes": {
+      "id": "d12",
+      "name": "labelled Copy of dtree",
+      "drawio_id": "xkearo18fkGN7BDzeqH2"
+    },
+    "cells": [
+      {
+        "id": "c13"
+      },
+      {
+        "id": "c14",
+        "parent": "ToCHc4KL9KvJzYzUVY1y-0"
+      },
+      {
+        "id": "c15",
+        "kind": "edge",
+        "parent": "ToCHc4KL9KvJzYzUVY1y-1",
+        "source": "ToCHc4KL9KvJzYzUVY1y-6",
+        "target": "ToCHc4KL9KvJzYzUVY1y-8"
+      },
+      {
+        "id": "c16",
+        "branch": false,
+        "kind": "branchLabel",
+        "parent": "ToCHc4KL9KvJzYzUVY1y-2"
+      },
+      {
+        "id": "c17",
+        "kind": "edge",
+        "parent": "ToCHc4KL9KvJzYzUVY1y-1",
+        "source": "ToCHc4KL9KvJzYzUVY1y-6",
+        "target": "ToCHc4KL9KvJzYzUVY1y-7"
+      },
+      {
+        "id": "c18",
+        "branch": true,
+        "kind": "branchLabel",
+        "parent": "ToCHc4KL9KvJzYzUVY1y-4"
+      },
+      {
+        "id": "c19",
+        "text": "float?",
+        "kind": "rhombus",
+        "parent": "ToCHc4KL9KvJzYzUVY1y-1"
+      },
+      {
+        "id": "c20",
+        "text": "compile float",
+        "kind": "process",
+        "parent": "ToCHc4KL9KvJzYzUVY1y-1"
+      },
+      {
+        "id": "c21",
+        "text": "error",
+        "kind": "process",
+        "parent": "ToCHc4KL9KvJzYzUVY1y-1"
+      },
+      {
+        "id": "c22",
+        "text": "c9",
+        "parent": "ToCHc4KL9KvJzYzUVY1y-1"
+      },
+      {
+        "id": "c23",
+        "text": "c10",
+        "parent": "ToCHc4KL9KvJzYzUVY1y-1"
+      },
+      {
+        "id": "c24",
+        "text": "c7",
+        "parent": "ToCHc4KL9KvJzYzUVY1y-1"
+      },
+      {
+        "id": "c25",
+        "text": "c5",
+        "parent": "ToCHc4KL9KvJzYzUVY1y-1"
+      },
+      {
+        "id": "c26",
+        "text": "c11",
+        "parent": "ToCHc4KL9KvJzYzUVY1y-1"
+      }
+    ]
+  },
+  {
+    "map": [
+      {
+        "drawio_id": "xkearo18fkGN7BDzeqH2",
+        "id": "d12"
+      },
+      {
+        "drawio_id": "ToCHc4KL9KvJzYzUVY1y-0",
+        "id": "c13"
+      },
+      {
+        "drawio_id": "ToCHc4KL9KvJzYzUVY1y-1",
+        "id": "c14"
+      },
+      {
+        "drawio_id": "ToCHc4KL9KvJzYzUVY1y-2",
+        "id": "c15"
+      },
+      {
+        "drawio_id": "ToCHc4KL9KvJzYzUVY1y-3",
+        "id": "c16"
+      },
+      {
+        "drawio_id": "ToCHc4KL9KvJzYzUVY1y-4",
+        "id": "c17"
+      },
+      {
+        "drawio_id": "ToCHc4KL9KvJzYzUVY1y-5",
+        "id": "c18"
+      },
+      {
+        "drawio_id": "ToCHc4KL9KvJzYzUVY1y-6",
+        "id": "c19"
+      },
+      {
+        "drawio_id": "ToCHc4KL9KvJzYzUVY1y-7",
+        "id": "c20"
+      },
+      {
+        "drawio_id": "ToCHc4KL9KvJzYzUVY1y-8",
+        "id": "c21"
+      },
+      {
+        "drawio_id": "EsB4xGEdaO0uJwA5zD2h-0",
+        "id": "c22"
+      },
+      {
+        "drawio_id": "EsB4xGEdaO0uJwA5zD2h-1",
+        "id": "c23"
+      },
+      {
+        "drawio_id": "EsB4xGEdaO0uJwA5zD2h-2",
+        "id": "c24"
+      },
+      {
+        "drawio_id": "EsB4xGEdaO0uJwA5zD2h-3",
+        "id": "c25"
+      },
+      {
+        "drawio_id": "EsB4xGEdaO0uJwA5zD2h-4",
+        "id": "c26"
+      }
+    ]
+  }
+]

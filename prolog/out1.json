@@ -1,0 +1,123 @@
+[
+  {
+    "type": "diagram",
+    "attributes": {
+      "id": "d2",
+      "name": "dtree",
+      "drawio_id": "brDq65to_PZeKpkbbApS"
+    },
+    "cells": [
+      {
+        "type": "cell",
+        "attributes": {
+          "id": "c3",
+          "drawio_id": "0"
+        }
+      },
+      {
+        "type": "cell",
+        "attributes": {
+          "id": "c4",
+          "drawio_id": "1",
+          "parent": "0"
+        }
+      },
+      {
+        "type": "cell",
+        "attributes": {
+          "id": "c5",
+          "drawio_id": "zTViIhP_tUskBqKQNT3X-42",
+          "parent": "1",
+          "source": "zTViIhP_tUskBqKQNT3X-46",
+          "target": "dRkQnjKu9n-pmXYVSlKa-6",
+          "kind": "falseEdge"
+        }
+      },
+      {
+        "type": "cell",
+        "attributes": {
+          "id": "c7",
+          "drawio_id": "zTViIhP_tUskBqKQNT3X-44",
+          "parent": "1",
+          "source": "zTViIhP_tUskBqKQNT3X-46",
+          "target": "dRkQnjKu9n-pmXYVSlKa-5",
+          "kind": "trueEdge"
+        }
+      },
+      {
+        "type": "cell",
+        "attributes": {
+          "id": "c9",
+          "drawio_id": "zTViIhP_tUskBqKQNT3X-46",
+          "text": "float?",
+          "kind": "rhombus",
+          "parent": "1"
+        }
+      },
+      {
+        "type": "cell",
+        "attributes": {
+          "id": "c10",
+          "drawio_id": "dRkQnjKu9n-pmXYVSlKa-5",
+          "text": "compile float",
+          "kind": "process",
+          "parent": "1"
+        }
+      },
+      {
+        "type": "cell",
+        "attributes": {
+          "id": "c11",
+          "drawio_id": "dRkQnjKu9n-pmXYVSlKa-6",
+          "text": "error",
+          "kind": "process",
+          "parent": "1"
+        }
+      }
+    ]
+  },
+  {
+    "map": [
+      {
+        "drawio_id": "0",
+        "id": "c3"
+      },
+      {
+        "drawio_id": "1",
+        "id": "c4"
+      },
+      {
+        "drawio_id": "brDq65to_PZeKpkbbApS",
+        "id": "d2"
+      },
+      {
+        "drawio_id": "zTViIhP_tUskBqKQNT3X-42",
+        "id": "c5"
+      },
+      {
+        "drawio_id": "zTViIhP_tUskBqKQNT3X-43",
+        "id": "c6"
+      },
+      {
+        "drawio_id": "zTViIhP_tUskBqKQNT3X-44",
+        "id": "c7"
+      },
+      {
+        "drawio_id": "zTViIhP_tUskBqKQNT3X-45",
+        "id": "c8"
+      },
+      {
+        "drawio_id": "zTViIhP_tUskBqKQNT3X-46",
+        "id": "c9"
+      },
+      {
+        "drawio_id": "dRkQnjKu9n-pmXYVSlKa-5",
+        "id": "c10"
+      },
+      {
+        "drawio_id": "dRkQnjKu9n-pmXYVSlKa-6",
+        "id": "c11"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1 @@
+jq 'map(if has("cells") then .cells |= map(.attributes | del(.drawio_id)) else . end)'

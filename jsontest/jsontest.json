@@ -1,0 +1,10 @@
+{
+    "name": "Demo term",
+    "created": {
+	"day": null,
+	"month":"November",
+	"year": 2025
+    },
+    "confirmed": true,
+    "members":[1,2,3]
+}

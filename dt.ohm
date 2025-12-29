@@ -1,0 +1,18 @@
+dt {
+  Main = YesNo
+  YesNo =
+    | "[" metaSymbol Arg? YesBranch NoBranch "]" -- meta
+    | "[" symbol     YesBranch NoBranch "]" -- expr
+
+  YesBranch = "|" "yes" ":" (YesNo | Process)
+  NoBranch = "|" "no" ":" (YesNo | Process)
+
+  Process = "@" processName "(" actual ")"
+
+  Arg =  "(" actual ")"
+  metaSymbol = "%" name
+  symbol = name
+  actual = name
+  processName = name
+  name = letter alnum*
+}

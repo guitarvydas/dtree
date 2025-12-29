@@ -1,0 +1,4 @@
+            [ %isFloat(word)
+              | yes: @compileFloat(word)
+              | no: @error(word)
+            ]

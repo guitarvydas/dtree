@@ -1,0 +1,410 @@
+[
+  {
+    "name": "main",
+    "children": [
+      {
+        "name": ":$ ./t2t dtree",
+        "id": 7
+      },
+      {
+        "name": ":$ ./t2t cleanup",
+        "id": 11
+      },
+      {
+        "name": ":$ ./process_json_jq.bash",
+        "id": 15
+      },
+      {
+        "name": "Read Text File",
+        "id": 19
+      },
+      {
+        "name": ":$ jq .",
+        "id": 23
+      },
+      {
+        "name": ":$ jq .",
+        "id": 27
+      },
+      {
+        "name": ":$ jq 'map(if has(\"cells\") then .cells |= map(.attributes | del(.drawio_id)) else . end)'",
+        "id": 31
+      },
+      {
+        "name": ":$ jq '.[0].cells |= map(.attributes | del(.drawio_id))'",
+        "id": 35
+      }
+    ],
+    "connections": [
+      {
+        "dir": 0,
+        "source_port": "",
+        "target_port": "",
+        "target": {
+          "name": "Read Text File",
+          "id": 19
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":$ ./t2t dtree",
+          "id": 7
+        },
+        "target": {
+          "name": ":$ ./t2t cleanup",
+          "id": 11
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":$ ./t2t cleanup",
+          "id": 11
+        },
+        "target": {
+          "name": ":$ ./process_json_jq.bash",
+          "id": 15
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": "Read Text File",
+          "id": 19
+        },
+        "target": {
+          "name": ":$ ./t2t dtree",
+          "id": 7
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":$ ./process_json_jq.bash",
+          "id": 15
+        },
+        "target": {
+          "name": ":$ jq .",
+          "id": 27
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":$ ./t2t cleanup",
+          "id": 11
+        },
+        "target": {
+          "name": ":$ jq .",
+          "id": 23
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":$ jq .",
+          "id": 27
+        },
+        "target": {
+          "name": ":$ jq 'map(if has(\"cells\") then .cells |= map(.attributes | del(.drawio_id)) else . end)'",
+          "id": 31
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "✗",
+        "target_port": "✗",
+        "source": {
+          "name": ":$ ./process_json_jq.bash",
+          "id": 15
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "✗",
+        "target_port": "✗",
+        "source": {
+          "name": ":$ ./t2t cleanup",
+          "id": 11
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "✗",
+        "target_port": "✗",
+        "source": {
+          "name": ":$ ./t2t dtree",
+          "id": 7
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "✗",
+        "target_port": "✗",
+        "source": {
+          "name": "Read Text File",
+          "id": 19
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "",
+        "target_port": "1.json",
+        "source": {
+          "name": ":$ jq .",
+          "id": 27
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "",
+        "target_port": "0.json",
+        "source": {
+          "name": ":$ jq .",
+          "id": 23
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "",
+        "target_port": "2.json",
+        "source": {
+          "name": ":$ jq 'map(if has(\"cells\") then .cells |= map(.attributes | del(.drawio_id)) else . end)'",
+          "id": 31
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "✗",
+        "target_port": "✗",
+        "source": {
+          "name": ":$ jq 'map(if has(\"cells\") then .cells |= map(.attributes | del(.drawio_id)) else . end)'",
+          "id": 31
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "✗",
+        "target_port": "✗",
+        "source": {
+          "name": ":$ jq .",
+          "id": 27
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "✗",
+        "target_port": "✗",
+        "source": {
+          "name": ":$ jq .",
+          "id": 23
+        }
+      }
+    ],
+    "file": "dtree-transmogrifier.drawio"
+  },
+  {
+    "name": "ir",
+    "children": [
+      {
+        "name": ":$ ./t2t2 dt dtfrish",
+        "id": 6
+      },
+      {
+        "name": ":$ ./t2t2 dt dtpython",
+        "id": 10
+      },
+      {
+        "name": "Read Text File",
+        "id": 14
+      },
+      {
+        "name": "Indent",
+        "id": 18
+      },
+      {
+        "name": "Indent",
+        "id": 22
+      }
+    ],
+    "connections": [
+      {
+        "dir": 0,
+        "source_port": "",
+        "target_port": "",
+        "target": {
+          "name": "Read Text File",
+          "id": 14
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": "Read Text File",
+          "id": 14
+        },
+        "target": {
+          "name": ":$ ./t2t2 dt dtfrish",
+          "id": 6
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": "Read Text File",
+          "id": 14
+        },
+        "target": {
+          "name": ":$ ./t2t2 dt dtpython",
+          "id": 10
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":$ ./t2t2 dt dtfrish",
+          "id": 6
+        },
+        "target": {
+          "name": "Indent",
+          "id": 18
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":$ ./t2t2 dt dtpython",
+          "id": 10
+        },
+        "target": {
+          "name": "Indent",
+          "id": 22
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "✗",
+        "target_port": "✗",
+        "source": {
+          "name": ":$ ./t2t2 dt dtfrish",
+          "id": 6
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "✗",
+        "target_port": "✗",
+        "source": {
+          "name": ":$ ./t2t2 dt dtpython",
+          "id": 10
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "✗",
+        "target_port": "✗",
+        "source": {
+          "name": "Read Text File",
+          "id": 14
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "",
+        "target_port": "frish",
+        "source": {
+          "name": "Indent",
+          "id": 18
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "",
+        "target_port": "py",
+        "source": {
+          "name": "Indent",
+          "id": 22
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "✗",
+        "target_port": "✗",
+        "source": {
+          "name": "Indent",
+          "id": 22
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "✗",
+        "target_port": "✗",
+        "source": {
+          "name": "Indent",
+          "id": 18
+        }
+      }
+    ],
+    "file": "dtree-transmogrifier.drawio"
+  },
+  {
+    "name": "Indent",
+    "children": [
+      {
+        "name": ":$ node ./pbp/tas/indenter.mjs",
+        "id": 5
+      }
+    ],
+    "connections": [
+      {
+        "dir": 0,
+        "source_port": "",
+        "target_port": "",
+        "target": {
+          "name": ":$ node ./pbp/tas/indenter.mjs",
+          "id": 5
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "✗",
+        "target_port": "✗",
+        "source": {
+          "name": ":$ node ./pbp/tas/indenter.mjs",
+          "id": 5
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":$ node ./pbp/tas/indenter.mjs",
+          "id": 5
+        }
+      }
+    ],
+    "file": "dtree-transmogrifier.drawio"
+  }
+]
