@@ -45,6 +45,7 @@ I followed up on the observation that I could reduce the JSON further by simply 
 I don't know much about how to write `jq` scripts, so I asked Claude to write the `jq` script.
 
 ![](status/progress-Dec.%206,%202025.drawio.png)
+
 ---
 # Dec. 7 2025
 I decided to switch from using just `.bash` scripts, to doing the whole thing in PBP. This immediately made it "obvious" what intermediate results I wanted to examine. 
@@ -54,6 +55,7 @@ I stuck the pre-optimized output into `out.0.json` and the optimized output to `
 I noticed a problem - the "process" node wasn't being recognized and emitted in the JSON output. This required a quick fix in the `.ohm` grammar and `.rwr` rewrite files (`dtree.ohm` and `dtree.rwr` respectively. Note that the t2t grammars created on Dec. 2 were called `dt.ohm` and `dt.rwr`. Similar, but different names, 2 sets of grammars.)
 
 ![](progress-Dec.%207,%202025.drawio.png)
+
 ---
 # Dec 27, 2025
 
@@ -70,6 +72,7 @@ I've been incrementally chipping away at the JSON files. I write a bit of PBP co
 I'm doing top-down-bottom-up development. My tools (PBP, Claude) are letting me do little bits of work that progressively suggest new ideas about how to get to what I wanted. I didn't predict that the design was going to go this way, but, I knew from experience that I could rely on this iterative approach to inch my way towards a solution.
 
 ![](progress-Dec.%2027,%202025.drawio.png)
+
 ---
 # Dec. 29, 2025
 
@@ -91,7 +94,14 @@ In the end I don't really care if the code is amazingly beautiful or not. I just
 
 Learning to write relations with dictionaries is an "investment" in the future. If I find out that it's easy, I will be encouraged to build more of these kinds of little tools. (I already think I want a state diagram to code transmogrifier, for example).
 
-
-
 ![](progress-Dec.%2029,%202025.drawio.png)
+
 ---
+# Dec 29 a, 2025
+fixed the missing map entries by moving one line (plus closing bracket) in `dtree.rwr `from the `Diagram` rule up to the `Top` rule
+
+ ![](progress-Dec.%2029a,%202025.drawio.png)  
+ 
+ ---
+
+# 

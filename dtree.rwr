@@ -3,16 +3,17 @@
 %parameter parentid
 
 % rewrite dtree {
-  Top [lb stuff* _ Diagrams+ rb] = ‛[«Diagrams»\n{"map":⎨maptojson⎬}\n]’
+  Top [lb stuff* _ Diagrams+ rb] =
+    ⎡ ⎨reset⎬
+      ‛[«Diagrams»\n{"map":⎨maptojson⎬}\n]’
+    ⎦
 
   Diagram [lb attr+ _ graphmodel rb] =
-    ⎡ ⎨reset⎬
       ⎡ diagramid=‛⎨newid ‛d’⎬’
 	⎡ parentid =‛⟪diagramid⟫’
 	  ‛\n{\n"type":"diagram",\n"attributes":{\n"id":"⟪diagramid⟫",«attr»\n},«graphmodel»\n},’
 	⎦
       ⎦
-    ⎦
 
   GraphModel [lb stuff+ _gt _root cells+ _eroot rb] = ‛\n"cells":[«cells»\]’
   Cell_long [lb attr+ _gt geometry? rb] =
