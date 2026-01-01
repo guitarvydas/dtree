@@ -53,12 +53,14 @@
             "id": "782bac3e1ad2d41c",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "status/xinterpret.dt Screenshot 2025-12-29 at 2.50.08 PM.png"
+                "file": "COMPARISON.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "xinterpret.dt Screenshot 2025-12-29 at 2.50.08 PM"
+              "icon": "lucide-file",
+              "title": "COMPARISON"
             }
           }
         ],
@@ -135,6 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "COMPARISON.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +147,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for COMPARISON"
             }
           },
           {
@@ -153,11 +156,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "COMPARISON.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from COMPARISON"
             }
           },
           {
@@ -195,13 +199,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Relationship Between dtree and forthish.md",
+                "file": "COMPARISON.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Relationship Between dtree and forthish"
+              "title": "Outline of COMPARISON"
             }
           }
         ],
@@ -222,32 +226,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "3ecbeb5dbd932a05",
+  "active": "782bac3e1ad2d41c",
   "lastOpenFiles": [
+    "out.3.json",
+    "out.2.json",
+    "out.1.json",
+    "out.0.json",
+    "dtree-transmogrifier.drawio.json",
+    "translate.js",
+    "translate_stdin.js",
+    "out.✗",
+    "Dec 7 X-Check.md",
+    "out-format.md",
+    "Dec 27 TODO.md",
     "status/xinterpret.dt Screenshot 2025-12-29 at 2.50.08 PM.png",
+    "Relationship Between dtree and forthish.md",
     "status/xinterpret manual mockup Screenshot 2025-12-06 at 11.28.22 PM.png",
     "status/xinterpret manual mockup Screenshot 2025-12-06 at 11.28.22 PM 2.png",
     "status/xinterpret-dtree.drawio.png",
     "explainers/translateIds Function - Annotated Walkthrough.md",
-    "Relationship Between dtree and forthish.md",
     "notes",
     "translate.js~",
-    "out.3.json",
     "explainers/Explaining the translateIds Function.md",
     "explainers/translateIds - Simple Visual Guide.md",
     "status/Progress.md",
     "explainers",
     "attic/query.md",
-    "translate.js",
     "status/design-sketches/pong-Game Logic.drawio.png",
     "status/design-sketches/pong-Game Over.drawio.png",
-    "status/design-sketches",
-    "#query.md#",
-    "query.md~",
     "query.md",
     "status/progress-Dec. 29a, 2025.drawio.png",
-    "pbp/kernel/#junk.py#",
-    "#prompt.md#",
     "README.md",
     "status/test.drawio.png",
     "status/progress-Dec. 6, 2025.drawio 1.png",

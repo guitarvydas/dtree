@@ -31,9 +31,9 @@ function maptojson () {
 	if (s !== "") {
 	    s += ",";  // Add comma before appending
 	}
-	s += `\n{"drawio_id":"${name}","id":"${dict[name]}"}`;
+	s += `\n"${name}":"${dict[name]}"`;
     }
-    return `[${s}\n]`;
+    return `{${s}\n}`;
 }
 
 function maptopl () {

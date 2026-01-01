@@ -4,31 +4,35 @@
     "children": [
       {
         "name": ":$ ./t2t dtree",
-        "id": 7
+        "id": 8
       },
       {
         "name": ":$ ./t2t cleanup",
-        "id": 11
+        "id": 12
       },
       {
         "name": ":$ ./process_json_jq.bash",
-        "id": 15
+        "id": 16
       },
       {
         "name": "Read Text File",
-        "id": 19
+        "id": 20
       },
       {
         "name": ":$ jq .",
-        "id": 23
+        "id": 24
       },
       {
         "name": ":$ jq .",
-        "id": 27
+        "id": 28
       },
       {
         "name": ":$ jq 'map(if has(\"cells\") then .cells |= map(.attributes | del(.drawio_id)) else . end)'",
-        "id": 31
+        "id": 32
+      },
+      {
+        "name": ":$ node translate.js",
+        "id": 36
       }
     ],
     "connections": [
@@ -38,7 +42,7 @@
         "target_port": "",
         "target": {
           "name": "Read Text File",
-          "id": 19
+          "id": 20
         }
       },
       {
@@ -47,11 +51,11 @@
         "target_port": "",
         "source": {
           "name": ":$ ./t2t dtree",
-          "id": 7
+          "id": 8
         },
         "target": {
           "name": ":$ ./t2t cleanup",
-          "id": 11
+          "id": 12
         }
       },
       {
@@ -60,11 +64,11 @@
         "target_port": "",
         "source": {
           "name": ":$ ./t2t cleanup",
-          "id": 11
+          "id": 12
         },
         "target": {
           "name": ":$ ./process_json_jq.bash",
-          "id": 15
+          "id": 16
         }
       },
       {
@@ -73,11 +77,11 @@
         "target_port": "",
         "source": {
           "name": "Read Text File",
-          "id": 19
+          "id": 20
         },
         "target": {
           "name": ":$ ./t2t dtree",
-          "id": 7
+          "id": 8
         }
       },
       {
@@ -86,11 +90,11 @@
         "target_port": "",
         "source": {
           "name": ":$ ./process_json_jq.bash",
-          "id": 15
+          "id": 16
         },
         "target": {
           "name": ":$ jq .",
-          "id": 27
+          "id": 28
         }
       },
       {
@@ -99,11 +103,11 @@
         "target_port": "",
         "source": {
           "name": ":$ ./t2t cleanup",
-          "id": 11
+          "id": 12
         },
         "target": {
           "name": ":$ jq .",
-          "id": 23
+          "id": 24
         }
       },
       {
@@ -112,11 +116,24 @@
         "target_port": "",
         "source": {
           "name": ":$ jq .",
-          "id": 27
+          "id": 28
         },
         "target": {
           "name": ":$ jq 'map(if has(\"cells\") then .cells |= map(.attributes | del(.drawio_id)) else . end)'",
-          "id": 31
+          "id": 32
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":$ jq 'map(if has(\"cells\") then .cells |= map(.attributes | del(.drawio_id)) else . end)'",
+          "id": 32
+        },
+        "target": {
+          "name": ":$ node translate.js",
+          "id": 36
         }
       },
       {
@@ -125,7 +142,7 @@
         "target_port": "✗",
         "source": {
           "name": ":$ ./process_json_jq.bash",
-          "id": 15
+          "id": 16
         }
       },
       {
@@ -134,7 +151,7 @@
         "target_port": "✗",
         "source": {
           "name": ":$ ./t2t cleanup",
-          "id": 11
+          "id": 12
         }
       },
       {
@@ -143,7 +160,7 @@
         "target_port": "✗",
         "source": {
           "name": ":$ ./t2t dtree",
-          "id": 7
+          "id": 8
         }
       },
       {
@@ -152,7 +169,7 @@
         "target_port": "✗",
         "source": {
           "name": "Read Text File",
-          "id": 19
+          "id": 20
         }
       },
       {
@@ -161,7 +178,7 @@
         "target_port": "1.json",
         "source": {
           "name": ":$ jq .",
-          "id": 27
+          "id": 28
         }
       },
       {
@@ -170,7 +187,7 @@
         "target_port": "0.json",
         "source": {
           "name": ":$ jq .",
-          "id": 23
+          "id": 24
         }
       },
       {
@@ -179,7 +196,7 @@
         "target_port": "2.json",
         "source": {
           "name": ":$ jq 'map(if has(\"cells\") then .cells |= map(.attributes | del(.drawio_id)) else . end)'",
-          "id": 31
+          "id": 32
         }
       },
       {
@@ -188,7 +205,7 @@
         "target_port": "✗",
         "source": {
           "name": ":$ jq 'map(if has(\"cells\") then .cells |= map(.attributes | del(.drawio_id)) else . end)'",
-          "id": 31
+          "id": 32
         }
       },
       {
@@ -197,7 +214,7 @@
         "target_port": "✗",
         "source": {
           "name": ":$ jq .",
-          "id": 27
+          "id": 28
         }
       },
       {
@@ -206,7 +223,25 @@
         "target_port": "✗",
         "source": {
           "name": ":$ jq .",
-          "id": 23
+          "id": 24
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "",
+        "target_port": "3.json",
+        "source": {
+          "name": ":$ node translate.js",
+          "id": 36
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "✗",
+        "target_port": "✗",
+        "source": {
+          "name": ":$ node translate.js",
+          "id": 36
         }
       }
     ],

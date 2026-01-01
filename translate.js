@@ -1,72 +1,71 @@
 #!/usr/bin/env node
-const fs = require('fs');
 
+/**
+ * Translate drawio IDs to short IDs in diagram cells
+ * @param {Array} data - Array containing diagrams and map object
+ * @returns {Array} - Transformed data with translated IDs
+ */
 function translateIds(data) {
-    // Build lookup map from drawio_id to id
-    const mapObj = data.find(item => item.map);
-    if (!mapObj) throw new Error('No map object found in data');
+    // Get the map directly - no loop needed with object structure!
+    const map = data.find(item => item.map).map;
     
-    const lookup = {};
-    mapObj.map.forEach(entry => {
-        lookup[entry.drawio_id] = entry.id;
-    });
-    
-    console.log(`Built lookup with ${mapObj.map.length} entries`);
-    
-    // Transform each diagram
+    // Transform each item
     return data.map(item => {
         if (item.type !== "diagram") return item;
         
-        console.log(`Translating diagram: ${item.attributes.name}`);
-        
         return {
             ...item,
-            cells: item.cells.map(cell => {
-                const newCell = { ...cell };
-                
-                // Translate parent, source, target if they exist
-                if (cell.parent && lookup[cell.parent]) {
-                    newCell.parent = lookup[cell.parent];
-                }
-                if (cell.source && lookup[cell.source]) {
-                    newCell.source = lookup[cell.source];
-                }
-                if (cell.target && lookup[cell.target]) {
-                    newCell.target = lookup[cell.target];
-                }
-                
-                return newCell;
-            })
+            cells: item.cells.map(cell => ({
+                ...cell,
+                parent: map[cell.parent] || cell.parent,
+                source: map[cell.source] || cell.source,
+                target: map[cell.target] || cell.target
+            }))
         };
     });
 }
 
-// Main execution
-if (require.main === module) {
-    const inputFile = process.argv[2] || '/home/claude/test_data.json';
-    const outputFile = process.argv[3] || '/home/claude/js_result.json';
-    
-    console.log(`Reading from: ${inputFile}`);
-    console.log(`Writing to: ${outputFile}\n`);
-    
-    try {
-        const data = JSON.parse(fs.readFileSync(inputFile, 'utf8'));
-        const result = translateIds(data);
-        //fs.writeFileSync(outputFile, JSON.stringify(result, null, 2));
-        console.log (JSON.stringify(result, null, 2));
-        
-        // Count translated cells
-        const cellCount = result
-            .filter(x => x.type === "diagram")
-            .reduce((sum, d) => sum + d.cells.length, 0);
-        
-        console.log(`\n✓ Success! Translated ${cellCount} cells`);
-        console.log(`Output written to: ${outputFile}`);
-        
-    } catch (err) {
-        console.error('❌ Error:', err.message);
-        process.exit(1);
-    }
+/**
+ * Forward lookup: Get short ID from drawio ID
+ * @param {string} drawioId - The drawio ID to look up
+ * @param {Object} map - The map object {drawio_id: short_id}
+ * @returns {string|undefined} - The short ID, or undefined if not found
+ */
+function getShortId(drawioId, map) {
+    return map[drawioId];
 }
 
-module.exports = { translateIds };
+/**
+ * Reverse lookup: Get drawio ID from short ID (linear search)
+ * @param {string} shortId - The short ID to look up
+ * @param {Object} map - The map object {drawio_id: short_id}
+ * @returns {string|undefined} - The drawio ID, or undefined if not found
+ */
+function getDrawioId(shortId, map) {
+    return Object.keys(map).find(key => map[key] === shortId);
+}
+
+// Main execution - read from stdin, write to stdout
+if (require.main === module) {
+    let inputData = '';
+    
+    process.stdin.setEncoding('utf8');
+    
+    process.stdin.on('data', chunk => {
+        inputData += chunk;
+    });
+    
+    process.stdin.on('end', () => {
+        try {
+            const data = JSON.parse(inputData);
+            const result = translateIds(data);
+            process.stdout.write(JSON.stringify(result, null, 2));
+            process.stdout.write('\n');
+        } catch (err) {
+            console.error('Error:', err.message);
+            process.exit(1);
+        }
+    });
+}
+
+module.exports = { translateIds, getShortId, getDrawioId };
