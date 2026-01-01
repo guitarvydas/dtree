@@ -265,3 +265,10 @@ given json like
 ]
 ```
 what is the minimum amount of SWIPL code (or `jq` code) needed to replace all "parent", "source" and "target" drawio_ids with shorter ids as in the map?
+
+---
+
+Write SWIPL code that effectively does a recursive descent tree-walk of the JSON data.
+Each "process" node generates a result string containing the text of the node.
+Each "rhombus" node generates a result string that combines the string from the yes branch and the string from the no branch into a new string "[ <text of node> | yes: <yes branch string> | no: <no branch string> ]".
+The input JSON data comes in on stdin and the resulting top-most string is printed on stdout.

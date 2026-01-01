@@ -4,35 +4,39 @@
     "children": [
       {
         "name": ":$ ./t2t dtree",
-        "id": 8
+        "id": 9
       },
       {
         "name": ":$ ./t2t cleanup",
-        "id": 12
+        "id": 13
       },
       {
         "name": ":$ ./process_json_jq.bash",
-        "id": 16
+        "id": 17
       },
       {
         "name": "Read Text File",
-        "id": 20
+        "id": 21
       },
       {
         "name": ":$ jq .",
-        "id": 24
+        "id": 25
       },
       {
         "name": ":$ jq .",
-        "id": 28
+        "id": 29
       },
       {
         "name": ":$ jq 'map(if has(\"cells\") then .cells |= map(.attributes | del(.drawio_id)) else . end)'",
-        "id": 32
+        "id": 33
       },
       {
         "name": ":$ node translate.js",
-        "id": 36
+        "id": 37
+      },
+      {
+        "name": ":$ swipl tree_walk.pl",
+        "id": 41
       }
     ],
     "connections": [
@@ -42,7 +46,7 @@
         "target_port": "",
         "target": {
           "name": "Read Text File",
-          "id": 20
+          "id": 21
         }
       },
       {
@@ -51,11 +55,11 @@
         "target_port": "",
         "source": {
           "name": ":$ ./t2t dtree",
-          "id": 8
+          "id": 9
         },
         "target": {
           "name": ":$ ./t2t cleanup",
-          "id": 12
+          "id": 13
         }
       },
       {
@@ -64,11 +68,11 @@
         "target_port": "",
         "source": {
           "name": ":$ ./t2t cleanup",
-          "id": 12
+          "id": 13
         },
         "target": {
           "name": ":$ ./process_json_jq.bash",
-          "id": 16
+          "id": 17
         }
       },
       {
@@ -77,11 +81,11 @@
         "target_port": "",
         "source": {
           "name": "Read Text File",
-          "id": 20
+          "id": 21
         },
         "target": {
           "name": ":$ ./t2t dtree",
-          "id": 8
+          "id": 9
         }
       },
       {
@@ -90,11 +94,11 @@
         "target_port": "",
         "source": {
           "name": ":$ ./process_json_jq.bash",
-          "id": 16
+          "id": 17
         },
         "target": {
           "name": ":$ jq .",
-          "id": 28
+          "id": 29
         }
       },
       {
@@ -103,11 +107,11 @@
         "target_port": "",
         "source": {
           "name": ":$ ./t2t cleanup",
-          "id": 12
+          "id": 13
         },
         "target": {
           "name": ":$ jq .",
-          "id": 24
+          "id": 25
         }
       },
       {
@@ -116,11 +120,11 @@
         "target_port": "",
         "source": {
           "name": ":$ jq .",
-          "id": 28
+          "id": 29
         },
         "target": {
           "name": ":$ jq 'map(if has(\"cells\") then .cells |= map(.attributes | del(.drawio_id)) else . end)'",
-          "id": 32
+          "id": 33
         }
       },
       {
@@ -129,11 +133,24 @@
         "target_port": "",
         "source": {
           "name": ":$ jq 'map(if has(\"cells\") then .cells |= map(.attributes | del(.drawio_id)) else . end)'",
-          "id": 32
+          "id": 33
         },
         "target": {
           "name": ":$ node translate.js",
-          "id": 36
+          "id": 37
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":$ node translate.js",
+          "id": 37
+        },
+        "target": {
+          "name": ":$ swipl tree_walk.pl",
+          "id": 41
         }
       },
       {
@@ -142,7 +159,7 @@
         "target_port": "✗",
         "source": {
           "name": ":$ ./process_json_jq.bash",
-          "id": 16
+          "id": 17
         }
       },
       {
@@ -151,7 +168,7 @@
         "target_port": "✗",
         "source": {
           "name": ":$ ./t2t cleanup",
-          "id": 12
+          "id": 13
         }
       },
       {
@@ -160,7 +177,7 @@
         "target_port": "✗",
         "source": {
           "name": ":$ ./t2t dtree",
-          "id": 8
+          "id": 9
         }
       },
       {
@@ -169,7 +186,7 @@
         "target_port": "✗",
         "source": {
           "name": "Read Text File",
-          "id": 20
+          "id": 21
         }
       },
       {
@@ -178,7 +195,7 @@
         "target_port": "1.json",
         "source": {
           "name": ":$ jq .",
-          "id": 28
+          "id": 29
         }
       },
       {
@@ -187,7 +204,7 @@
         "target_port": "0.json",
         "source": {
           "name": ":$ jq .",
-          "id": 24
+          "id": 25
         }
       },
       {
@@ -196,7 +213,7 @@
         "target_port": "2.json",
         "source": {
           "name": ":$ jq 'map(if has(\"cells\") then .cells |= map(.attributes | del(.drawio_id)) else . end)'",
-          "id": 32
+          "id": 33
         }
       },
       {
@@ -205,7 +222,7 @@
         "target_port": "✗",
         "source": {
           "name": ":$ jq 'map(if has(\"cells\") then .cells |= map(.attributes | del(.drawio_id)) else . end)'",
-          "id": 32
+          "id": 33
         }
       },
       {
@@ -214,7 +231,7 @@
         "target_port": "✗",
         "source": {
           "name": ":$ jq .",
-          "id": 28
+          "id": 29
         }
       },
       {
@@ -223,7 +240,7 @@
         "target_port": "✗",
         "source": {
           "name": ":$ jq .",
-          "id": 24
+          "id": 25
         }
       },
       {
@@ -232,7 +249,7 @@
         "target_port": "3.json",
         "source": {
           "name": ":$ node translate.js",
-          "id": 36
+          "id": 37
         }
       },
       {
@@ -241,7 +258,25 @@
         "target_port": "✗",
         "source": {
           "name": ":$ node translate.js",
-          "id": 36
+          "id": 37
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "✗",
+        "target_port": "✗",
+        "source": {
+          "name": ":$ swipl tree_walk.pl",
+          "id": 41
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "",
+        "target_port": "dt",
+        "source": {
+          "name": ":$ swipl tree_walk.pl",
+          "id": 41
         }
       }
     ],

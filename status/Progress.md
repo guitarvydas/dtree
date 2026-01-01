@@ -104,4 +104,7 @@ fixed the missing map entries by moving one line (plus closing bracket) in `dtre
  
  ---
 
-# 
+# Jan 1, 2026
+added call to `translate.js` which rewrites all drawio long ids into shorter ids.
+
+![](progress-Jan%201,%202026.drawio.png)

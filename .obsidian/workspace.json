@@ -62,9 +62,37 @@
               "icon": "lucide-file",
               "title": "COMPARISON"
             }
+          },
+          {
+            "id": "bd7354ee18a345c4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "explainers/How the Tree Walker Works - Visual Guide.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "How the Tree Walker Works - Visual Guide"
+            }
+          },
+          {
+            "id": "e448af4268996988",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "explainers/Decision Tree Walker Guide - SWI-Prolog.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Decision Tree Walker Guide - SWI-Prolog"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -137,7 +165,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "COMPARISON.md",
+                "file": "explainers/Decision Tree Walker Guide - SWI-Prolog.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +175,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for COMPARISON"
+              "title": "Backlinks for Decision Tree Walker Guide - SWI-Prolog"
             }
           },
           {
@@ -156,12 +184,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "COMPARISON.md",
+                "file": "explainers/Decision Tree Walker Guide - SWI-Prolog.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from COMPARISON"
+              "title": "Outgoing links from Decision Tree Walker Guide - SWI-Prolog"
             }
           },
           {
@@ -199,13 +227,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "COMPARISON.md",
+                "file": "explainers/Decision Tree Walker Guide - SWI-Prolog.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of COMPARISON"
+              "title": "Outline of Decision Tree Walker Guide - SWI-Prolog"
             }
           }
         ],
@@ -226,16 +254,24 @@
       "bases:Create new base": false
     }
   },
-  "active": "782bac3e1ad2d41c",
+  "active": "e448af4268996988",
   "lastOpenFiles": [
+    "out.dt",
     "out.3.json",
     "out.2.json",
     "out.1.json",
     "out.0.json",
     "dtree-transmogrifier.drawio.json",
+    "tree_walk.pl~",
+    "sample-tree.json",
+    "tree_walk.pl",
+    "explainers/Decision Tree Walker Guide - SWI-Prolog.md",
+    "explainers/How the Tree Walker Works - Visual Guide.md",
+    "status/Progress.md",
+    "#prompt.md#",
+    "status/progress-Jan 1, 2026.drawio.png",
+    "COMPARISON.md",
     "translate.js",
-    "translate_stdin.js",
-    "out.✗",
     "Dec 7 X-Check.md",
     "out-format.md",
     "Dec 27 TODO.md",
@@ -245,12 +281,8 @@
     "status/xinterpret manual mockup Screenshot 2025-12-06 at 11.28.22 PM 2.png",
     "status/xinterpret-dtree.drawio.png",
     "explainers/translateIds Function - Annotated Walkthrough.md",
-    "notes",
-    "translate.js~",
     "explainers/Explaining the translateIds Function.md",
     "explainers/translateIds - Simple Visual Guide.md",
-    "status/Progress.md",
-    "explainers",
     "attic/query.md",
     "status/design-sketches/pong-Game Logic.drawio.png",
     "status/design-sketches/pong-Game Over.drawio.png",
@@ -259,7 +291,6 @@
     "README.md",
     "status/test.drawio.png",
     "status/progress-Dec. 6, 2025.drawio 1.png",
-    "prompt.md",
-    "status/progress-Dec. 2, 2025.drawio 1.png"
+    "prompt.md"
   ]
 }

@@ -1,1 +1,1 @@
-node translate.js
+swipl tree_walk.pl
