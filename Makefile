@@ -1,4 +1,4 @@
-all: PBP-drawio2json-simple
+all: PBP-drawio2json-full
 
 # Dec. 27 - dt transmogrifier from .dt to .frish and .py
 ir:

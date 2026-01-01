@@ -1,1 +1,1 @@
-[ float? | yes: compile float | no: error ]
+[ found | yes: [ %inCompilingState | yes: [ immediate? | yes: exec | no: compile word ] | no: exec ] | no: [ %inCompilingState | yes: [ int? | yes: compile int | no: [ float? | yes: compile float | no: error ] ] | no: [ int? | yes: push as int | no: [ float? | yes: push as float | no: error ] ] ] ]
