@@ -20,8 +20,49 @@
               "icon": "lucide-file",
               "title": "Progress"
             }
+          },
+          {
+            "id": "f98482837efe5816",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "explainers/translateIds - Simple Visual Guide.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "translateIds - Simple Visual Guide"
+            }
+          },
+          {
+            "id": "96e2964fc7b94dc4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "explainers/Explaining the translateIds Function.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Explaining the translateIds Function"
+            }
+          },
+          {
+            "id": "782bac3e1ad2d41c",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "status/xinterpret.dt Screenshot 2025-12-29 at 2.50.08 PM.png"
+              },
+              "icon": "lucide-image",
+              "title": "xinterpret.dt Screenshot 2025-12-29 at 2.50.08 PM"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -94,7 +135,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "status/Progress.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +144,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Progress"
+              "title": "Backlinks"
             }
           },
           {
@@ -113,12 +153,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "status/Progress.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Progress"
+              "title": "Outgoing links"
             }
           },
           {
@@ -156,13 +195,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "status/Progress.md",
+                "file": "Relationship Between dtree and forthish.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Progress"
+              "title": "Outline of Relationship Between dtree and forthish"
             }
           }
         ],
@@ -183,29 +222,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "057b8cf1aa77aab2",
+  "active": "3ecbeb5dbd932a05",
   "lastOpenFiles": [
+    "status/xinterpret.dt Screenshot 2025-12-29 at 2.50.08 PM.png",
+    "status/xinterpret manual mockup Screenshot 2025-12-06 at 11.28.22 PM.png",
+    "status/xinterpret manual mockup Screenshot 2025-12-06 at 11.28.22 PM 2.png",
+    "status/xinterpret-dtree.drawio.png",
+    "explainers/translateIds Function - Annotated Walkthrough.md",
+    "Relationship Between dtree and forthish.md",
+    "notes",
+    "translate.js~",
+    "out.3.json",
+    "explainers/Explaining the translateIds Function.md",
+    "explainers/translateIds - Simple Visual Guide.md",
+    "status/Progress.md",
+    "explainers",
+    "attic/query.md",
+    "translate.js",
+    "status/design-sketches/pong-Game Logic.drawio.png",
+    "status/design-sketches/pong-Game Over.drawio.png",
+    "status/design-sketches",
+    "#query.md#",
+    "query.md~",
+    "query.md",
     "status/progress-Dec. 29a, 2025.drawio.png",
     "pbp/kernel/#junk.py#",
     "#prompt.md#",
-    "#out.2.json#",
-    "out.2.json",
-    "out.1.json",
-    "out.0.json",
-    "dtree-transmogrifier.drawio.json",
-    "status/Progress.pdf",
-    "status/xinterpret.dt Screenshot 2025-12-29 at 2.50.08 PM.png",
-    "status/xinterpret-dtree.drawio.png",
-    "status/Progress.md",
     "README.md",
     "status/test.drawio.png",
-    "status/xinterpret manual mockup Screenshot 2025-12-06 at 11.28.22 PM 2.png",
-    "status/xinterpret manual mockup Screenshot 2025-12-06 at 11.28.22 PM.png",
     "status/progress-Dec. 6, 2025.drawio 1.png",
     "prompt.md",
-    "status/progress-Dec. 2, 2025.drawio 1.png",
-    "status/progress-Begin.drawio 1.png",
-    "out.frish Screenshot 2025-12-29 at 2.50.53 PM.png",
-    "status/dec2frish Screenshot 2025-12-07 at 8.51.23 AM.png"
+    "status/progress-Dec. 2, 2025.drawio 1.png"
   ]
 }

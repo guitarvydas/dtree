@@ -1,0 +1,241 @@
+[
+  {
+    "type": "diagram",
+    "attributes": {
+      "id": "d2",
+      "name": "dtree",
+      "drawio_id": "brDq65to_PZeKpkbbApS"
+    },
+    "cells": [
+      {
+        "id": "c3"
+      },
+      {
+        "id": "c4",
+        "parent": "c3"
+      },
+      {
+        "id": "c5",
+        "parent": "c4",
+        "source": "c9",
+        "target": "c11",
+        "kind": "falseEdge"
+      },
+      {
+        "id": "c7",
+        "parent": "c4",
+        "source": "c9",
+        "target": "c10",
+        "kind": "trueEdge"
+      },
+      {
+        "id": "c9",
+        "text": "float?",
+        "kind": "rhombus",
+        "parent": "c4"
+      },
+      {
+        "id": "c10",
+        "text": "compile float",
+        "kind": "process",
+        "parent": "c4"
+      },
+      {
+        "id": "c11",
+        "text": "error",
+        "kind": "process",
+        "parent": "c4"
+      }
+    ]
+  },
+  {
+    "type": "diagram",
+    "attributes": {
+      "id": "d12",
+      "name": "labelled Copy of dtree",
+      "drawio_id": "xkearo18fkGN7BDzeqH2"
+    },
+    "cells": [
+      {
+        "id": "c13"
+      },
+      {
+        "id": "c14",
+        "parent": "c13"
+      },
+      {
+        "id": "c15",
+        "kind": "edge",
+        "parent": "c14",
+        "source": "c19",
+        "target": "c21"
+      },
+      {
+        "id": "c16",
+        "branch": false,
+        "kind": "branchLabel",
+        "parent": "c15"
+      },
+      {
+        "id": "c17",
+        "kind": "edge",
+        "parent": "c14",
+        "source": "c19",
+        "target": "c20"
+      },
+      {
+        "id": "c18",
+        "branch": true,
+        "kind": "branchLabel",
+        "parent": "c17"
+      },
+      {
+        "id": "c19",
+        "text": "float?",
+        "kind": "rhombus",
+        "parent": "c14"
+      },
+      {
+        "id": "c20",
+        "text": "compile float",
+        "kind": "process",
+        "parent": "c14"
+      },
+      {
+        "id": "c21",
+        "text": "error",
+        "kind": "process",
+        "parent": "c14"
+      },
+      {
+        "id": "c22",
+        "text": "c9",
+        "parent": "c14"
+      },
+      {
+        "id": "c23",
+        "text": "c10",
+        "parent": "c14"
+      },
+      {
+        "id": "c24",
+        "text": "c7",
+        "parent": "c14"
+      },
+      {
+        "id": "c25",
+        "text": "c5",
+        "parent": "c14"
+      },
+      {
+        "id": "c26",
+        "text": "c11",
+        "parent": "c14"
+      }
+    ]
+  },
+  {
+    "map": [
+      {
+        "drawio_id": "0",
+        "id": "c3"
+      },
+      {
+        "drawio_id": "1",
+        "id": "c4"
+      },
+      {
+        "drawio_id": "brDq65to_PZeKpkbbApS",
+        "id": "d2"
+      },
+      {
+        "drawio_id": "zTViIhP_tUskBqKQNT3X-42",
+        "id": "c5"
+      },
+      {
+        "drawio_id": "zTViIhP_tUskBqKQNT3X-43",
+        "id": "c6"
+      },
+      {
+        "drawio_id": "zTViIhP_tUskBqKQNT3X-44",
+        "id": "c7"
+      },
+      {
+        "drawio_id": "zTViIhP_tUskBqKQNT3X-45",
+        "id": "c8"
+      },
+      {
+        "drawio_id": "zTViIhP_tUskBqKQNT3X-46",
+        "id": "c9"
+      },
+      {
+        "drawio_id": "dRkQnjKu9n-pmXYVSlKa-5",
+        "id": "c10"
+      },
+      {
+        "drawio_id": "dRkQnjKu9n-pmXYVSlKa-6",
+        "id": "c11"
+      },
+      {
+        "drawio_id": "xkearo18fkGN7BDzeqH2",
+        "id": "d12"
+      },
+      {
+        "drawio_id": "ToCHc4KL9KvJzYzUVY1y-0",
+        "id": "c13"
+      },
+      {
+        "drawio_id": "ToCHc4KL9KvJzYzUVY1y-1",
+        "id": "c14"
+      },
+      {
+        "drawio_id": "ToCHc4KL9KvJzYzUVY1y-2",
+        "id": "c15"
+      },
+      {
+        "drawio_id": "ToCHc4KL9KvJzYzUVY1y-3",
+        "id": "c16"
+      },
+      {
+        "drawio_id": "ToCHc4KL9KvJzYzUVY1y-4",
+        "id": "c17"
+      },
+      {
+        "drawio_id": "ToCHc4KL9KvJzYzUVY1y-5",
+        "id": "c18"
+      },
+      {
+        "drawio_id": "ToCHc4KL9KvJzYzUVY1y-6",
+        "id": "c19"
+      },
+      {
+        "drawio_id": "ToCHc4KL9KvJzYzUVY1y-7",
+        "id": "c20"
+      },
+      {
+        "drawio_id": "ToCHc4KL9KvJzYzUVY1y-8",
+        "id": "c21"
+      },
+      {
+        "drawio_id": "EsB4xGEdaO0uJwA5zD2h-0",
+        "id": "c22"
+      },
+      {
+        "drawio_id": "EsB4xGEdaO0uJwA5zD2h-1",
+        "id": "c23"
+      },
+      {
+        "drawio_id": "EsB4xGEdaO0uJwA5zD2h-2",
+        "id": "c24"
+      },
+      {
+        "drawio_id": "EsB4xGEdaO0uJwA5zD2h-3",
+        "id": "c25"
+      },
+      {
+        "drawio_id": "EsB4xGEdaO0uJwA5zD2h-4",
+        "id": "c26"
+      }
+    ]
+  }
+]
