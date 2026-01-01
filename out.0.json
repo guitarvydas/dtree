@@ -69,7 +69,7 @@
         "attributes": {
           "id": "c9",
           "drawio_id": "zTViIhP_tUskBqKQNT3X-5",
-          "text": "found",
+          "text": "found?",
           "kind": "rhombus",
           "parent": "1"
         }
@@ -121,7 +121,7 @@
         "attributes": {
           "id": "c14",
           "drawio_id": "zTViIhP_tUskBqKQNT3X-10",
-          "text": "%inCompilingState",
+          "text": "inCompilingState?",
           "kind": "rhombus",
           "parent": "1"
         }
@@ -173,7 +173,7 @@
         "attributes": {
           "id": "c19",
           "drawio_id": "zTViIhP_tUskBqKQNT3X-15",
-          "text": "%inCompilingState",
+          "text": "inCompilingState?",
           "kind": "rhombus",
           "parent": "1"
         }
@@ -453,7 +453,7 @@
         "attributes": {
           "id": "c46",
           "drawio_id": "dRkQnjKu9n-pmXYVSlKa-2",
-          "text": "compile word",
+          "text": "compile_word",
           "kind": "process",
           "parent": "1"
         }
@@ -473,7 +473,7 @@
         "attributes": {
           "id": "c48",
           "drawio_id": "dRkQnjKu9n-pmXYVSlKa-4",
-          "text": "compile int",
+          "text": "compile_int",
           "kind": "process",
           "parent": "1"
         }
@@ -483,7 +483,7 @@
         "attributes": {
           "id": "c49",
           "drawio_id": "dRkQnjKu9n-pmXYVSlKa-5",
-          "text": "compile float",
+          "text": "compile_float",
           "kind": "process",
           "parent": "1"
         }
@@ -503,7 +503,7 @@
         "attributes": {
           "id": "c51",
           "drawio_id": "dRkQnjKu9n-pmXYVSlKa-7",
-          "text": "push as int",
+          "text": "push_as_int",
           "kind": "process",
           "parent": "1"
         }
@@ -513,7 +513,7 @@
         "attributes": {
           "id": "c52",
           "drawio_id": "dRkQnjKu9n-pmXYVSlKa-8",
-          "text": "push as float",
+          "text": "push_as_float",
           "kind": "process",
           "parent": "1"
         }

@@ -1,0 +1,42 @@
+if (found? ) {
+    if (inCompilingState? ) {
+        if (immediate? ) {
+            
+            %funcall exec  ()
+        } else {
+            
+            %funcall compile_word  ()
+        }
+    } else {
+        
+        %funcall exec  ()
+    }
+} else {
+    if (inCompilingState? ) {
+        if (int? ) {
+            
+            %funcall compile_int  ()
+        } else {
+            if (float? ) {
+                
+                %funcall compile_float  ()
+            } else {
+                
+                %funcall error  ()
+            }
+        }
+    } else {
+        if (int? ) {
+            
+            %funcall push_as_int  ()
+        } else {
+            if (float? ) {
+                
+                %funcall push_as_float  ()
+            } else {
+                
+                %funcall error  ()
+            }
+        }
+    }
+}

@@ -7,12 +7,17 @@ dt {
   YesBranch = "|" "yes" ":" (YesNo | Process)
   NoBranch = "|" "no" ":" (YesNo | Process)
 
-  Process = "@" processName "(" actual ")"
+  Process = 
+    | "@"? processName Actual -- withactual
+    | "@"? processName -- withoutactual
+  Actual = "(" actual ")"
 
   Arg =  "(" actual ")"
-  metaSymbol = "%" name
+  metaSymbol =
+    | "%" name -- percent
+    | name "?" -- question
   symbol = name
   actual = name
   processName = name
-  name = letter alnum*
+  name = letter (~"[" ~"]" ~"|" ~"yes" ~"no" ~"@" ~"(" ~")" ~"%" ~"?" any)*
 }

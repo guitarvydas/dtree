@@ -30,7 +30,7 @@
       },
       {
         "id": "c9",
-        "text": "found",
+        "text": "found?",
         "kind": "rhombus",
         "parent": "1"
       },
@@ -50,7 +50,7 @@
       },
       {
         "id": "c14",
-        "text": "%inCompilingState",
+        "text": "inCompilingState?",
         "kind": "rhombus",
         "parent": "1"
       },
@@ -70,7 +70,7 @@
       },
       {
         "id": "c19",
-        "text": "%inCompilingState",
+        "text": "inCompilingState?",
         "kind": "rhombus",
         "parent": "1"
       },
@@ -182,7 +182,7 @@
       },
       {
         "id": "c46",
-        "text": "compile word",
+        "text": "compile_word",
         "kind": "process",
         "parent": "1"
       },
@@ -194,13 +194,13 @@
       },
       {
         "id": "c48",
-        "text": "compile int",
+        "text": "compile_int",
         "kind": "process",
         "parent": "1"
       },
       {
         "id": "c49",
-        "text": "compile float",
+        "text": "compile_float",
         "kind": "process",
         "parent": "1"
       },
@@ -212,13 +212,13 @@
       },
       {
         "id": "c51",
-        "text": "push as int",
+        "text": "push_as_int",
         "kind": "process",
         "parent": "1"
       },
       {
         "id": "c52",
-        "text": "push as float",
+        "text": "push_as_float",
         "kind": "process",
         "parent": "1"
       },

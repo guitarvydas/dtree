@@ -1,4 +1,4 @@
-% rewrite dt {
+% rewrite dtpy {
   Main [YesNo] = ‛def junk ():⤷\n«YesNo»’
 
   YesNo_meta [lb sym arg? y n rb] = ‛if «sym» «arg»:⤷«y»⤶\n else: ⤷«n»⤶\n’
@@ -7,12 +7,15 @@
   YesBranch [_or _yes _ x] = ‛\n«x»’
   NoBranch [_or _no _ x] = ‛\n«x»’
 
-  Process [_at proc lb param rb] = ‛\n«proc» («param»)’
+  Process_withactual [_at? proc actual] = ‛\n«proc» «actual»’
+  Process_withoutactual [_at? proc] = ‛\n«proc» ()’
+  Actual [lp actual rp] = ‛(«actual»)’
 
   Arg [lb name rb] = ‛(«name»)’
-  metaSymbol [_pct name] = ‛«name»’
+  metaSymbol_percent [_pct name] = ‛pct_«name»’
+  metaSymbol_question [name _q] = ‛«name»_q’
   symbol [name] = ‛«name»’
   actual [name] = ‛«name»’
   processName [name] = ‛«name»’
-  name [letter alnum*] = ‛«letter»«alnum»’
+  name [letter cs*] = ‛«letter»«cs»’
 }
