@@ -159,25 +159,25 @@
         <mxCell id="dRkQnjKu9n-pmXYVSlKa-1" value="exec" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
           <mxGeometry x="10" y="520" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="dRkQnjKu9n-pmXYVSlKa-2" value="compile_word" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
+        <mxCell id="dRkQnjKu9n-pmXYVSlKa-2" value="compile word" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
           <mxGeometry x="170" y="520" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="dRkQnjKu9n-pmXYVSlKa-3" value="exec" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
           <mxGeometry x="330" y="520" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="dRkQnjKu9n-pmXYVSlKa-4" value="compile_int" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
+        <mxCell id="dRkQnjKu9n-pmXYVSlKa-4" value="compile int" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
           <mxGeometry x="450" y="520" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="dRkQnjKu9n-pmXYVSlKa-5" value="compile_float" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
+        <mxCell id="dRkQnjKu9n-pmXYVSlKa-5" value="compile float" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
           <mxGeometry x="570" y="520" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="dRkQnjKu9n-pmXYVSlKa-6" value="error" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
           <mxGeometry x="730" y="520" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="dRkQnjKu9n-pmXYVSlKa-7" value="push_as_int" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
+        <mxCell id="dRkQnjKu9n-pmXYVSlKa-7" value="push as int" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
           <mxGeometry x="850" y="520" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="dRkQnjKu9n-pmXYVSlKa-8" value="push_as_float" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
+        <mxCell id="dRkQnjKu9n-pmXYVSlKa-8" value="push as float" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
           <mxGeometry x="970" y="520" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="dRkQnjKu9n-pmXYVSlKa-9" value="error" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">

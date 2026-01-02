@@ -17,5 +17,9 @@
   symbol [name] = ‛«name»’
   actual [name] = ‛«name»’
   processName [name] = ‛«name»’
-  name [letter cs*] = ‛«letter»«cs»’
+  name [nameNoWs nameWithWs*] = ‛«nameNoWs»«nameWithWs»’
+  nameWithWs [spaces nameNoWs] = ‛_«nameNoWs»’
+  nameNoWs [letter cs*] = ‛«letter»«cs»’
+  nametail_alnum [c] = ‛«c»’
+  nametail_other [c] = ‛_’
 }

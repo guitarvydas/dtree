@@ -3,37 +3,37 @@ def junk ():
         if inCompilingState_q :
             if immediate_q :
                 
-                exec  ()
+                exec ()
             else: 
                 
-                compile_word  ()
+                compile_word ()
             
         else: 
             
-            exec  ()
+            exec ()
         
     else: 
         if inCompilingState_q :
             if int_q :
                 
-                compile_int  ()
+                compile_int ()
             else: 
                 if float_q :
                     
-                    compile_float  ()
+                    compile_float ()
                 else: 
                     
-                    error  ()
+                    error ()
                 
             
         else: 
             if int_q :
                 
-                push_as_int  ()
+                push_as_int ()
             else: 
                 if float_q :
                     
-                    push_as_float  ()
+                    push_as_float ()
                 else: 
                     
-                    error  ()
+                    error ()

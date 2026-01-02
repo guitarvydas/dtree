@@ -2,40 +2,40 @@ if (found? ) {
     if (inCompilingState? ) {
         if (immediate? ) {
             
-            %funcall exec  ()
+            %funcall exec ()
         } else {
             
-            %funcall compile_word  ()
+            %funcall compile word ()
         }
     } else {
         
-        %funcall exec  ()
+        %funcall exec ()
     }
 } else {
     if (inCompilingState? ) {
         if (int? ) {
             
-            %funcall compile_int  ()
+            %funcall compile int ()
         } else {
             if (float? ) {
                 
-                %funcall compile_float  ()
+                %funcall compile float ()
             } else {
                 
-                %funcall error  ()
+                %funcall error ()
             }
         }
     } else {
         if (int? ) {
             
-            %funcall push_as_int  ()
+            %funcall push as int ()
         } else {
             if (float? ) {
                 
-                %funcall push_as_float  ()
+                %funcall push as float ()
             } else {
                 
-                %funcall error  ()
+                %funcall error ()
             }
         }
     }

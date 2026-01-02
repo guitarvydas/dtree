@@ -87,10 +87,30 @@ enter_rule ("processName");
     set_return (`${name.rwr ()}`);
 return exit_rule ("processName");
 },
-name : function (letter,cs,) {
+name : function (nameNoWs,nameWithWs,) {
 enter_rule ("name");
-    set_return (`${letter.rwr ()}${cs.rwr ().join ('')}`);
+    set_return (`${nameNoWs.rwr ()}${nameWithWs.rwr ().join ('')}`);
 return exit_rule ("name");
+},
+nameWithWs : function (spaces,nameNoWs,) {
+enter_rule ("nameWithWs");
+    set_return (`_${nameNoWs.rwr ()}`);
+return exit_rule ("nameWithWs");
+},
+nameNoWs : function (letter,cs,) {
+enter_rule ("nameNoWs");
+    set_return (`${letter.rwr ()}${cs.rwr ().join ('')}`);
+return exit_rule ("nameNoWs");
+},
+nametail_alnum : function (c,) {
+enter_rule ("nametail_alnum");
+    set_return (`${c.rwr ()}`);
+return exit_rule ("nametail_alnum");
+},
+nametail_other : function (c,) {
+enter_rule ("nametail_other");
+    set_return (`_`);
+return exit_rule ("nametail_other");
 },
 _terminal: function () { return this.sourceString; },
 _iter: function (...children) { return children.map(c => c.rwr ()); }

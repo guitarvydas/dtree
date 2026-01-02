@@ -19,5 +19,10 @@ dt {
   symbol = name
   actual = name
   processName = name
-  name = letter (~"[" ~"]" ~"|" ~"yes" ~"no" ~"@" ~"(" ~")" ~"%" ~"?" any)*
+  name = nameNoWs nameWithWs*
+  nameWithWs = spaces nameNoWs
+  nameNoWs = letter nametail*
+  nametail =
+    | alnum -- alnum
+    | (~space ~"[" ~"]" ~"|" ~"yes" ~"no" ~"@" ~"(" ~")" ~"%" ~"?" any) -- other
 }
