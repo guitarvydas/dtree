@@ -18,7 +18,7 @@
   actual [name] = ‛«name»’
   processName [name] = ‛«name»’
   name [nameNoWs nameWithWs*] = ‛«nameNoWs»«nameWithWs»’
-  nameWithWs [spaces nameNoWs] = ‛ «nameNoWs»’
+  nameWithWs [spaces nameNoWs] = ‛‹«spaces»›«nameNoWs»’
   nameNoWs [letter cs*] = ‛«letter»«cs»’
   nametail_alnum [c] = ‛«c»’
   nametail_other [c] = ‛‹«c»›’

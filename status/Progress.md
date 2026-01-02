@@ -108,3 +108,26 @@ fixed the missing map entries by moving one line (plus closing bracket) in `dtre
 added call to `translate.js` which rewrites all drawio long ids into shorter ids.
 
 ![](progress-Jan%201,%202026.drawio.png)
+---
+
+![](progress-Jan%201b,%202026.drawio.png)
+
+Added translate.js to pipeline. Not strictly necessary, but makes the ids shorter and more readable for debugging.
+
+Cloned `ir` part to `Translate DT` part. Replaced `Read File` with `tree_walk`. Tree_walk accepts input from pipeline in form of JSON, then produces `.dt` code (square bracket decision tree syntax). This is fed into the `t2t2` parts to produce `.frish` and `.py` code.
+
+The goal is to produce `.frish` code, so the `.py` code is not, actually, strictly necessary, but it acts as a quick sanity check - the Python compiler compiles and checks the syntax. This simple check points out any deficiencies in the generated Python code (just a cross check, for added comfort).
+
+We're done with this sub-project. We have built a decision tree diagram to `.frish` code generator. Now, we can go back to the `.frish` project and we can copy/paste the generated code into the `xinterpret()` routine and test whether this creates a proper forthish interpreter that is portable to 3 languages.
+
+# Final
+
+This diagram:
+
+![](xinterpret-dtree.drawio-jan%201b.png)
+
+is transmogrified to this code:
+![](make%20Screenshot%202026-01-01%20at%2010.26.06%20PM.png)
+In the process, I invented a new way to represent spaces within identifiers and function names. Names that contain spaces are emitted with the spaces surrounded by `‹›` unicode characters.
+
+![](ws%20in%20names%20Screenshot%202026-01-01%20at%2010.29.09%20PM.png)

@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "explainers/Decision Tree Walker Guide - SWI-Prolog.md",
+                "file": "status/Progress.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Decision Tree Walker Guide - SWI-Prolog"
+              "title": "Progress"
             }
           }
         ],
@@ -165,7 +165,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "explainers/Decision Tree Walker Guide - SWI-Prolog.md",
+                "file": "status/Progress.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -175,7 +175,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Decision Tree Walker Guide - SWI-Prolog"
+              "title": "Backlinks for Progress"
             }
           },
           {
@@ -184,12 +184,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "explainers/Decision Tree Walker Guide - SWI-Prolog.md",
+                "file": "status/Progress.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Decision Tree Walker Guide - SWI-Prolog"
+              "title": "Outgoing links from Progress"
             }
           },
           {
@@ -227,13 +227,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "explainers/Decision Tree Walker Guide - SWI-Prolog.md",
+                "file": "status/Progress.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Decision Tree Walker Guide - SWI-Prolog"
+              "title": "Outline of Progress"
             }
           }
         ],
@@ -256,9 +256,18 @@
   },
   "active": "e448af4268996988",
   "lastOpenFiles": [
+    "status/ws in names Screenshot 2026-01-01 at 10.29.09 PM.png",
+    "status/make Screenshot 2026-01-01 at 10.26.06 PM.png",
     "out.py",
     "out.frish",
     "dtree-transmogrifier.drawio.json",
+    "status/make Screenshot 2026-01-01 at 10.19.01 PM.png",
+    "status/Progress.md",
+    "status/xinterpret-dtree.drawio-jan 1b.png",
+    "explainers/Decision Tree Walker Guide - SWI-Prolog.md",
+    "status/progress-Jan 1b, 2026.drawio.png",
+    "status/dtree-transmogrifier-Transmogrify DT.drawio.png",
+    "status/dtree-transmogrifier-main.drawio.jan 1b.png",
     "out.✗",
     "out.3.json",
     "out.2.json",
@@ -266,10 +275,7 @@
     "out.0.json",
     "#dt.ohm#",
     "#dtpython.rwr#",
-    "out.dt",
-    "explainers/Decision Tree Walker Guide - SWI-Prolog.md",
     "explainers/How the Tree Walker Works - Visual Guide.md",
-    "status/Progress.md",
     "status/progress-Jan 1, 2026.drawio.png",
     "COMPARISON.md",
     "Dec 7 X-Check.md",
@@ -279,18 +285,12 @@
     "Relationship Between dtree and forthish.md",
     "status/xinterpret manual mockup Screenshot 2025-12-06 at 11.28.22 PM.png",
     "status/xinterpret manual mockup Screenshot 2025-12-06 at 11.28.22 PM 2.png",
-    "status/xinterpret-dtree.drawio.png",
     "explainers/translateIds Function - Annotated Walkthrough.md",
     "explainers/Explaining the translateIds Function.md",
     "explainers/translateIds - Simple Visual Guide.md",
     "attic/query.md",
-    "status/design-sketches/pong-Game Logic.drawio.png",
-    "status/design-sketches/pong-Game Over.drawio.png",
     "query.md",
-    "status/progress-Dec. 29a, 2025.drawio.png",
     "README.md",
-    "status/test.drawio.png",
-    "status/progress-Dec. 6, 2025.drawio 1.png",
     "prompt.md"
   ]
 }

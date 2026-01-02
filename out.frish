@@ -5,7 +5,7 @@ if (found? ) {
             %funcall exec ()
         } else {
             
-            %funcall compile word ()
+            %funcall compile‹ ›word ()
         }
     } else {
         
@@ -15,11 +15,11 @@ if (found? ) {
     if (inCompilingState? ) {
         if (int? ) {
             
-            %funcall compile int ()
+            %funcall compile‹ ›int ()
         } else {
             if (float? ) {
                 
-                %funcall compile float ()
+                %funcall compile‹ ›float ()
             } else {
                 
                 %funcall error ()
@@ -28,11 +28,11 @@ if (found? ) {
     } else {
         if (int? ) {
             
-            %funcall push as int ()
+            %funcall push‹ ›as‹ ›int ()
         } else {
             if (float? ) {
                 
-                %funcall push as float ()
+                %funcall push‹ ›as‹ ›float ()
             } else {
                 
                 %funcall error ()
