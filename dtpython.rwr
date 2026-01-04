@@ -1,25 +1,17 @@
 % rewrite dtpy {
-  Main [YesNo] = ‛def junk ():⤷\n«YesNo»’
-
-  YesNo_meta [lb sym arg? y n rb] = ‛if «sym» «arg»:⤷«y»⤶\n else: ⤷«n»⤶\n’
-  YesNo_expr [lb sym y n rb] = ‛if «sym»:⤷«y»⤶\n else:⤷«n»⤶\n’
+  Main [YesNo] = ‛«YesNo»’
+  YesNo [lb text y n rb] = ‛if («text») {⤷«y»⤶\n} else {⤷«n»⤶\n}’
 
   YesBranch [_or _yes _ x] = ‛\n«x»’
   NoBranch [_or _no _ x] = ‛\n«x»’
 
-  Process_withactual [_at? proc actual] = ‛\n«proc» «actual»’
-  Process_withoutactual [_at? proc] = ‛\n«proc» ()’
-  Actual [lp actual rp] = ‛(«actual»)’
+  text [cs+] = ‛«cs»’
 
-  Arg [lb name rb] = ‛(«name»)’
-  metaSymbol_percent [_pct name] = ‛pct_«name»’
-  metaSymbol_question [name _q] = ‛«name»_q’
-  symbol [name] = ‛«name»’
-  actual [name] = ‛«name»’
-  processName [name] = ‛«name»’
-  name [nameNoWs nameWithWs*] = ‛«nameNoWs»«nameWithWs»’
-  nameWithWs [spaces nameNoWs] = ‛_«nameNoWs»’
-  nameNoWs [letter cs*] = ‛«letter»«cs»’
-  nametail_alnum [c] = ‛«c»’
-  nametail_other [c] = ‛_’
+  char_newline [_] = ‛’
+  char_questionmark [_] = ‛’
+  char_begindiv [_] = ‛’
+  char_enddiv [_] = ‛’
+  char_beginspan [lb cs* rb] = ‛’
+  char_endspan [_] = ‛’
+  char_other [c] =‛«c»’
 }
