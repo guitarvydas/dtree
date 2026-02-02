@@ -3,8 +3,8 @@ import kernel0d as zd
 
 try:
 
-    [palette, env] = zd.initialize_from_files (sys.argv[1], sys.argv[4:])
-    top = zd.start (arg=sys.argv[2], part_name=sys.argv[3], palette=palette, env=env)
+    [palette, env] = zd.initialize_from_files (sys.argv[3:])
+    top = zd.start (arg=sys.argv[1], part_name=sys.argv[2], palette=palette, env=env)
 
 
 
