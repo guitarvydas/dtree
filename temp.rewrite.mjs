@@ -52,6 +52,11 @@ enter_rule ("char_questionmark");
     set_return (``);
 return exit_rule ("char_questionmark");
 },
+char_percent : function (_,) {
+enter_rule ("char_percent");
+    set_return (`%funcall `);
+return exit_rule ("char_percent");
+},
 char_begindiv : function (_,) {
 enter_rule ("char_begindiv");
     set_return (``);

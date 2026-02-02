@@ -10,6 +10,7 @@ dt {
   char =
     | "\n" -- newline
     | "?" -- questionmark
+    | "%" -- percent
     | "&lt;div&gt;" -- begindiv
     | "&lt;/div&gt;" -- enddiv
     | "&lt;span" (~"&gt;" any)* "&gt;" -- beginspan

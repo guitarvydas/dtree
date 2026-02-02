@@ -9,6 +9,7 @@
 
   char_newline [_] = ‛’
   char_questionmark [_] = ‛?’
+  char_percent [_] = ‛%’
   char_begindiv [_] = ‛’
   char_enddiv [_] = ‛’
   char_beginspan [lb cs* rb] = ‛’
