@@ -1,5 +1,5 @@
 if (found) {
-    if (%funcall incompilingstate) {
+    if (%incompilingstate) {
         if (foundimmediate) {
             %funcall exec(item)
         } else {
@@ -9,24 +9,24 @@ if (found) {
         %funcall exec(item)
     }
 } else {
-    if (%funcall incompilingstate) {
-        if (%funcall isinteger(item)) {
+    if (%incompilingstate) {
+        if (%isinteger(item)) {
             %funcall compileinteger(item)
         } else {
-            if (%funcall isfloat(item)) {
+            if (%isfloat(item)) {
                 %funcall compilefloat(item)
             } else {
-                %funcall returnFalse
+                %return False
             }
         }
     } else {
-        if (%funcall isinteger(item)) {
-            %funcall pushasinteger(item)
+        if (%isinteger(item)) {
+            %funcall push as integer(item)
         } else {
-            if (%funcall isfloat(item)) {
-                %funcall pushasfloat(item)
+            if (%isfloat(item)) {
+                %funcall push as float(item)
             } else {
-                %funcall returnFalse
+                %return False
             }
         }
     }

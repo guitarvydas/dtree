@@ -1,29 +1,29 @@
-if found_p_:
-    if incompilingstate_p_:
-        if foundimmediate_p_:
-            exec(item)_
+if found_p:
+    if incompilingstate_p:
+        if foundimmediate_p:
+            exec(item)
         else:
-            compileword(item)_
+            compileword(item)
         
     else:
-        exec(item)_
+        exec(item)
     
 else:
-    if incompilingstate_p_:
-        if isinteger(item)_p_:
-            compileinteger(item)_
+    if incompilingstate_p:
+        if isinteger(item)_p:
+            compileinteger(item)
         else:
-            if isfloat(item)_p_:
-                compilefloat(item)_
+            if isfloat(item)_p:
+                compilefloat(item)
             else:
-                return_False_
+                return_False
             
         
     else:
-        if isinteger(item)_p_:
-            push_as_integer(item)_
+        if isinteger(item)_p:
+            push_as_integer(item)
         else:
-            if isfloat(item)_p_:
-                push_as_float(item)_
+            if isfloat(item)_p:
+                push_as_float(item)
             else:
-                return_False_
+                return_False

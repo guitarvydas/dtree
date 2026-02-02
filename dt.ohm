@@ -16,6 +16,7 @@ dt {
     | "&lt;span" (~"&gt;" any)* "&gt;" -- beginspan
     | "&lt;/span&gt;" -- endspan
     | "@" -- at
-    | space -- space
+    | space+ &(~alnum) -- space
+    | space -- nonbreakingspace
     | (~space ~"[" ~"]" ~"|" ~"yes" ~"no" ~":" ~"&" ~";" any) -- other
 }

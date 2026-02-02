@@ -53,7 +53,8 @@ dt {
     | "&lt;span" (~"&gt;" any)* "&gt;" -- beginspan
     | "&lt;/span&gt;" -- endspan
     | "@" -- at
-    | space -- space
+    | space+ &(~alnum) -- space
+    | space -- nonbreakingspace
     | (~space ~"[" ~"]" ~"|" ~"yes" ~"no" ~":" ~"&" ~";" any) -- other
 }
 `;
@@ -171,7 +172,7 @@ return exit_rule ("char_questionmark");
 },
 char_percent : function (_,) {
 enter_rule ("char_percent");
-    set_return (`%funcall `);
+    set_return (`%`);
 return exit_rule ("char_percent");
 },
 char_begindiv : function (_,) {
@@ -203,6 +204,11 @@ char_space : function (_,) {
 enter_rule ("char_space");
     set_return (``);
 return exit_rule ("char_space");
+},
+char_nonbreakingspace : function (_,) {
+enter_rule ("char_nonbreakingspace");
+    set_return (` `);
+return exit_rule ("char_nonbreakingspace");
 },
 char_other : function (c,) {
 enter_rule ("char_other");

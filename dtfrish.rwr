@@ -9,12 +9,13 @@
 
   char_newline [_] = ‛’
   char_questionmark [_] = ‛’
-  char_percent [_] = ‛%funcall ’
+  char_percent [_] = ‛%’
   char_begindiv [_] = ‛’
   char_enddiv [_] = ‛’
   char_beginspan [lb cs* rb] = ‛’
   char_endspan [_] = ‛’
   char_at [_] = ‛%funcall ’
   char_space [_] = ‛’
+  char_nonbreakingspace [_] = ‛ ’
   char_other [c] =‛«c»’
 }

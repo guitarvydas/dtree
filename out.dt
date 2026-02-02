@@ -21,19 +21,19 @@
                         [%isfloat(item)? 
                             | yes: @compilefloat(item)
                         
-                            | no: %returnFalse
+                            | no: %return False
                         ]
                 ]
         
             | no: 
                 [%isinteger(item)? 
-                    | yes: @pushasinteger(item)
+                    | yes: @push as integer(item)
                 
                     | no: 
                         [%isfloat(item)? 
-                            | yes: @pushasfloat(item)
+                            | yes: @push as float(item)
                         
-                            | no: %returnFalse
+                            | no: %return False
                         ]
                 ]
         ]
