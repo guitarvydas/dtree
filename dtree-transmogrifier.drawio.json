@@ -4,15 +4,15 @@
     "children": [
       {
         "name": "Read Text File",
-        "id": 6
+        "id": 8
       },
       {
         "name": "Transmogrify DT",
-        "id": 10
+        "id": 12
       },
       {
         "name": "Convert Diagram to Culled JSON",
-        "id": 15
+        "id": 19
       }
     ],
     "connections": [
@@ -22,7 +22,7 @@
         "target_port": "",
         "target": {
           "name": "Read Text File",
-          "id": 6
+          "id": 8
         }
       },
       {
@@ -31,11 +31,11 @@
         "target_port": "",
         "source": {
           "name": "Read Text File",
-          "id": 6
+          "id": 8
         },
         "target": {
           "name": "Convert Diagram to Culled JSON",
-          "id": 15
+          "id": 19
         }
       },
       {
@@ -44,11 +44,11 @@
         "target_port": "",
         "source": {
           "name": "Convert Diagram to Culled JSON",
-          "id": 15
+          "id": 19
         },
         "target": {
           "name": "Transmogrify DT",
-          "id": 10
+          "id": 12
         }
       },
       {
@@ -57,7 +57,7 @@
         "target_port": "✗",
         "source": {
           "name": "Convert Diagram to Culled JSON",
-          "id": 15
+          "id": 19
         }
       },
       {
@@ -66,7 +66,7 @@
         "target_port": "✗",
         "source": {
           "name": "Read Text File",
-          "id": 6
+          "id": 8
         }
       },
       {
@@ -75,7 +75,7 @@
         "target_port": "✗",
         "source": {
           "name": "Transmogrify DT",
-          "id": 10
+          "id": 12
         }
       },
       {
@@ -84,7 +84,25 @@
         "target_port": "frish",
         "source": {
           "name": "Transmogrify DT",
-          "id": 10
+          "id": 12
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "dt",
+        "target_port": "dt",
+        "source": {
+          "name": "Transmogrify DT",
+          "id": 12
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "js",
+        "target_port": "js",
+        "source": {
+          "name": "Transmogrify DT",
+          "id": 12
         }
       },
       {
@@ -93,17 +111,17 @@
         "target_port": "py",
         "source": {
           "name": "Transmogrify DT",
-          "id": 10
+          "id": 12
         }
       }
     ],
-    "file": "/Users/paultarvydas/projects/pbp-dev/dtree/dtree-transmogrifier.drawio"
+    "file": "dtree-transmogrifier.drawio"
   },
   {
     "name": "Indent",
     "children": [
       {
-        "name": ":$ node _00_/tas/indenter.mjs",
+        "name": ":$ _/indent",
         "id": 5
       }
     ],
@@ -113,7 +131,7 @@
         "source_port": "",
         "target_port": "",
         "target": {
-          "name": ":$ node _00_/tas/indenter.mjs",
+          "name": ":$ _/indent",
           "id": 5
         }
       },
@@ -122,7 +140,7 @@
         "source_port": "✗",
         "target_port": "✗",
         "source": {
-          "name": ":$ node _00_/tas/indenter.mjs",
+          "name": ":$ _/indent",
           "id": 5
         }
       },
@@ -131,35 +149,55 @@
         "source_port": "",
         "target_port": "",
         "source": {
-          "name": ":$ node _00_/tas/indenter.mjs",
+          "name": ":$ _/indent",
           "id": 5
         }
       }
     ],
-    "file": "/Users/paultarvydas/projects/pbp-dev/dtree/dtree-transmogrifier.drawio"
+    "file": "dtree-transmogrifier.drawio"
   },
   {
     "name": "Transmogrify DT",
     "children": [
       {
         "name": ":$ swipl tree_walk.pl",
-        "id": 6
+        "id": 8
       },
       {
-        "name": ":$ ./t2t2 _00_ dt dtfrish",
-        "id": 10
+        "name": ":$ _/t2t dt dtjs",
+        "id": 12
       },
       {
-        "name": ":$ ./t2t2 _00_ dt dtpython",
-        "id": 14
-      },
-      {
-        "name": "Indent",
-        "id": 18
+        "name": ":$ _/t2t dt dtpretty",
+        "id": 16
       },
       {
         "name": "Indent",
-        "id": 22
+        "id": 20
+      },
+      {
+        "name": "Indent",
+        "id": 24
+      },
+      {
+        "name": ":$ _/t2t dt dtpy",
+        "id": 28
+      },
+      {
+        "name": "Indent",
+        "id": 32
+      },
+      {
+        "name": ":$ _/t2t dt dtfrish",
+        "id": 36
+      },
+      {
+        "name": "Indent",
+        "id": 40
+      },
+      {
+        "name": "🚫",
+        "id": 44
       }
     ],
     "connections": [
@@ -169,7 +207,7 @@
         "target_port": "",
         "target": {
           "name": ":$ swipl tree_walk.pl",
-          "id": 6
+          "id": 8
         }
       },
       {
@@ -178,11 +216,11 @@
         "target_port": "",
         "source": {
           "name": ":$ swipl tree_walk.pl",
-          "id": 6
+          "id": 8
         },
         "target": {
-          "name": ":$ ./t2t2 _00_ dt dtfrish",
-          "id": 10
+          "name": ":$ _/t2t dt dtjs",
+          "id": 12
         }
       },
       {
@@ -191,11 +229,11 @@
         "target_port": "",
         "source": {
           "name": ":$ swipl tree_walk.pl",
-          "id": 6
+          "id": 8
         },
         "target": {
-          "name": ":$ ./t2t2 _00_ dt dtpython",
-          "id": 14
+          "name": ":$ _/t2t dt dtpretty",
+          "id": 16
         }
       },
       {
@@ -203,12 +241,12 @@
         "source_port": "",
         "target_port": "",
         "source": {
-          "name": ":$ ./t2t2 _00_ dt dtfrish",
-          "id": 10
+          "name": ":$ _/t2t dt dtjs",
+          "id": 12
         },
         "target": {
           "name": "Indent",
-          "id": 18
+          "id": 20
         }
       },
       {
@@ -216,21 +254,199 @@
         "source_port": "",
         "target_port": "",
         "source": {
-          "name": ":$ ./t2t2 _00_ dt dtpython",
-          "id": 14
+          "name": ":$ _/t2t dt dtpretty",
+          "id": 16
         },
         "target": {
           "name": "Indent",
-          "id": 22
+          "id": 24
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": ":$ _/t2t dt dtjs",
+          "id": 12
+        },
+        "target": {
+          "name": "🚫",
+          "id": 44
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": "Indent",
+          "id": 20
+        },
+        "target": {
+          "name": "🚫",
+          "id": 44
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": "Indent",
+          "id": 24
+        },
+        "target": {
+          "name": "🚫",
+          "id": 44
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": ":$ swipl tree_walk.pl",
+          "id": 8
+        },
+        "target": {
+          "name": "🚫",
+          "id": 44
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":$ _/t2t dt dtfrish",
+          "id": 36
+        },
+        "target": {
+          "name": "Indent",
+          "id": 40
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":$ swipl tree_walk.pl",
+          "id": 8
+        },
+        "target": {
+          "name": ":$ _/t2t dt dtpy",
+          "id": 28
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":$ swipl tree_walk.pl",
+          "id": 8
+        },
+        "target": {
+          "name": ":$ _/t2t dt dtfrish",
+          "id": 36
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": ":$ _/t2t dt dtfrish",
+          "id": 36
+        },
+        "target": {
+          "name": "🚫",
+          "id": 44
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":$ _/t2t dt dtpy",
+          "id": 28
+        },
+        "target": {
+          "name": "Indent",
+          "id": 32
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": "Indent",
+          "id": 32
+        },
+        "target": {
+          "name": "🚫",
+          "id": 44
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": "Indent",
+          "id": 40
+        },
+        "target": {
+          "name": "🚫",
+          "id": 44
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": ":$ _/t2t dt dtpy",
+          "id": 28
+        },
+        "target": {
+          "name": "🚫",
+          "id": 44
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": ":$ _/t2t dt dtpretty",
+          "id": 16
+        },
+        "target": {
+          "name": "🚫",
+          "id": 44
         }
       },
       {
         "dir": 2,
         "source_port": "",
-        "target_port": "frish",
+        "target_port": "js",
         "source": {
           "name": "Indent",
-          "id": 18
+          "id": 20
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "",
+        "target_port": "dt",
+        "source": {
+          "name": "Indent",
+          "id": 24
         }
       },
       {
@@ -239,56 +455,29 @@
         "target_port": "py",
         "source": {
           "name": "Indent",
-          "id": 22
+          "id": 32
         }
       },
       {
         "dir": 2,
-        "source_port": "✗",
-        "target_port": "✗",
-        "source": {
-          "name": ":$ ./t2t2 _00_ dt dtfrish",
-          "id": 10
-        }
-      },
-      {
-        "dir": 2,
-        "source_port": "✗",
-        "target_port": "✗",
-        "source": {
-          "name": ":$ ./t2t2 _00_ dt dtpython",
-          "id": 14
-        }
-      },
-      {
-        "dir": 2,
-        "source_port": "✗",
-        "target_port": "✗",
+        "source_port": "",
+        "target_port": "frish",
         "source": {
           "name": "Indent",
-          "id": 18
+          "id": 40
         }
       },
       {
         "dir": 2,
-        "source_port": "✗",
+        "source_port": "",
         "target_port": "✗",
         "source": {
-          "name": "Indent",
-          "id": 22
-        }
-      },
-      {
-        "dir": 2,
-        "source_port": "✗",
-        "target_port": "✗",
-        "source": {
-          "name": ":$ swipl tree_walk.pl",
-          "id": 6
+          "name": "🚫",
+          "id": 44
         }
       }
     ],
-    "file": "/Users/paultarvydas/projects/pbp-dev/dtree/dtree-transmogrifier.drawio"
+    "file": "dtree-transmogrifier.drawio"
   },
   {
     "name": "Convert Diagram to Culled JSON",
@@ -405,17 +594,17 @@
         }
       }
     ],
-    "file": "/Users/paultarvydas/projects/pbp-dev/dtree/dtree-transmogrifier.drawio"
+    "file": "dtree-transmogrifier.drawio"
   },
   {
     "name": "Decision Tree Diagram to JSON",
     "children": [
       {
-        "name": ":$ ./t2t dtree",
+        "name": ":$ _/t2t dtree",
         "id": 5
       },
       {
-        "name": ":$ ./t2t cleanup",
+        "name": ":$ _/t2t cleanup",
         "id": 9
       }
     ],
@@ -425,7 +614,7 @@
         "source_port": "",
         "target_port": "",
         "target": {
-          "name": ":$ ./t2t dtree",
+          "name": ":$ _/t2t dtree",
           "id": 5
         }
       },
@@ -434,11 +623,11 @@
         "source_port": "",
         "target_port": "",
         "source": {
-          "name": ":$ ./t2t dtree",
+          "name": ":$ _/t2t dtree",
           "id": 5
         },
         "target": {
-          "name": ":$ ./t2t cleanup",
+          "name": ":$ _/t2t cleanup",
           "id": 9
         }
       },
@@ -447,7 +636,7 @@
         "source_port": "✗",
         "target_port": "✗",
         "source": {
-          "name": ":$ ./t2t dtree",
+          "name": ":$ _/t2t dtree",
           "id": 5
         }
       },
@@ -456,7 +645,7 @@
         "source_port": "",
         "target_port": "",
         "source": {
-          "name": ":$ ./t2t cleanup",
+          "name": ":$ _/t2t cleanup",
           "id": 9
         }
       },
@@ -465,12 +654,12 @@
         "source_port": "✗",
         "target_port": "✗",
         "source": {
-          "name": ":$ ./t2t cleanup",
+          "name": ":$ _/t2t cleanup",
           "id": 9
         }
       }
     ],
-    "file": "/Users/paultarvydas/projects/pbp-dev/dtree/dtree-transmogrifier.drawio"
+    "file": "dtree-transmogrifier.drawio"
   },
   {
     "name": "Detect Edge Kinds",
@@ -509,7 +698,7 @@
         }
       }
     ],
-    "file": "/Users/paultarvydas/projects/pbp-dev/dtree/dtree-transmogrifier.drawio"
+    "file": "dtree-transmogrifier.drawio"
   },
   {
     "name": "Drop drawio_id",
@@ -548,7 +737,7 @@
         }
       }
     ],
-    "file": "/Users/paultarvydas/projects/pbp-dev/dtree/dtree-transmogrifier.drawio"
+    "file": "dtree-transmogrifier.drawio"
   },
   {
     "name": "Make Remaining ID References Human Readable",
@@ -587,6 +776,6 @@
         }
       }
     ],
-    "file": "/Users/paultarvydas/projects/pbp-dev/dtree/dtree-transmogrifier.drawio"
+    "file": "dtree-transmogrifier.drawio"
   }
 ]
