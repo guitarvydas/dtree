@@ -8,7 +8,7 @@ export PBPHERE=$(pwd)
 export PBPTOOL="<none>"
 export PYTHONPATH="${PBP}/kernel:${PYTHONPATH}"
 ${PBP}/das2json dtree-transmogrifier.drawio
-python main.py 'xinterpret.drawio' main dtree-transmogrifier.drawio.json | ${PBP}/splitoutputs
+python main.py 'example.drawio' main dtree-transmogrifier.drawio.json | ${PBP}/splitoutputs
 if [ -f out.✗ ]
 then
     cat out.✗
