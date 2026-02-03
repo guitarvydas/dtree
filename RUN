@@ -7,16 +7,25 @@ export PBP=~/projects/pbp-dev
 export PBPHERE=$(pwd)
 export PYTHONPATH="${PBP}/kernel:${PYTHONPATH}"
 fname="$1"
+
+echo
+echo '*****'
+for i in PBP PBPHERE PYTHONPATH fname
+do
+    echo "$i = ${!i}"
+done
+echo '*****'
+echo
+
 ${PBP}/das2json dtree-transmogrifier.drawio
 python main.py "${fname}.drawio" main dtree-transmogrifier.drawio.json | ${PBP}/splitoutputs
 if [ -f out.✗ ]
 then
     cat out.✗
+else
+    mv out.frish "${PBPHERE}/${fname}.frish"
+    mv out.dt "${PBPHERE}/${fname}.dt"
+    mv out.py "${PBPHERE}/${fname}.py"
+    mv out.js "${PBPHERE}/${fname}.js"
 fi
 
-# else
-#     mv out.frish "${caller}/${fname}.frish"
-#     mv out.dt "${caller}/${fname}.dt"
-#     mv out.py "${caller}/${fname}.py"
-#     mv out.js "${caller}/${fname}.js"
-# fi
