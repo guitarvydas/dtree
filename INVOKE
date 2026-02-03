@@ -1,0 +1,20 @@
+#!/bin/bash
+rm -f out.*
+rm -f *.json
+set -e
+export SHELLOPTS
+export PBPHERE=$1
+caller=$2
+target="${caller}/$3"
+${PBP}/das2json dtree-transmogrifier.drawio
+python main.py "${target}.drawio" main dtree-transmogrifier.drawio.json | ${PBP}/splitoutputs
+if [ -f out.✗ ]
+then
+    cat out.✗
+else
+    mv out.frish "${target}.frish"
+    mv out.dt "${target}.dt"
+    mv out.frish "${target}.frish"
+    mv out.frish "${target}.frish"
+fi
+

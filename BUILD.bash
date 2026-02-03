@@ -5,7 +5,6 @@ set -e
 export SHELLOPTS
 export PBP=~/projects/pbp-dev
 export PBPHERE=$(pwd)
-export PBPTOOL="<none>"
 export PYTHONPATH="${PBP}/kernel:${PYTHONPATH}"
 ${PBP}/das2json dtree-transmogrifier.drawio
 python main.py 'example.drawio' main dtree-transmogrifier.drawio.json | ${PBP}/splitoutputs

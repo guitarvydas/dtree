@@ -1,0 +1,18 @@
+#!/bin/bash
+rm -f 'out.*'
+rm -f '*.json'
+apppath=$1
+caller=$2
+fname=$3
+cd ${apppath}
+${PBP}/das2json dtree-transmogrifier.drawio
+python main.py "${caller}/${fname}.drawio" main dtree-transmogrifier.drawio.json | ${PBP}/splitoutputs
+if [ -f out.✗ ]
+then
+    cat out.✗
+else
+    mv out.frish "${caller}/${fname}.frish"
+    mv out.dt "${caller}/${fname}.dt"
+    mv out.py "${caller}/${fname}.py"
+    mv out.js "${caller}/${fname}.js"
+fi
