@@ -1,0 +1,14 @@
+#!/bin/bash
+# git-changes.sh - Record most recent changes to git
+# Usage: ./git-changes.sh [commit_message]
+# Default message: "WIP: recent changes"
+
+set -euo pipefail
+
+MSG="${1:-"WIP: recent changes"}"
+
+git add .
+git status --porcelain | head -20  # Preview first 20 changes
+
+git commit -m "$MSG"
+echo "Committed: $MSG"

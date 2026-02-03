@@ -1,2 +1,2 @@
 #!/bin/bash
-./RUN
+./RUN "example"
