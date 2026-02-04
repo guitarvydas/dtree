@@ -3,14 +3,11 @@ rm -f out.*
 rm -f *.json
 set -e
 export SHELLOPTS
-export PBP=~/projects/pbp-dev
-export PBPHERE=$(pwd)
-export PYTHONPATH="${PBP}/kernel:${PYTHONPATH}"
 fname="$1"
 
 echo
 echo '*****'
-for i in PBP PBPHERE PYTHONPATH fname
+for i in PBP PBPHERE PBPCALLER PYTHONPATH fname
 do
     echo "$i = ${!i}"
 done
