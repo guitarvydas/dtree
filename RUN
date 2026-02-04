@@ -15,7 +15,7 @@ echo '*****'
 echo
 
 ${PBP}/das2json dtree-transmogrifier.drawio
-python main.py "${fname}.drawio" main dtree-transmogrifier.drawio.json | ${PBP}/splitoutputs
+python main.py "${PBPCALLER}/${fname}.drawio" main dtree-transmogrifier.drawio.json | ${PBP}/splitoutputs
 if [ -f out.✗ ]
 then
     cat out.✗
