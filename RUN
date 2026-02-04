@@ -20,9 +20,9 @@ if [ -f out.✗ ]
 then
     cat out.✗
 else
-    mv out.frish "${PBPHERE}/${fname}.frish"
-    mv out.dt "${PBPHERE}/${fname}.dt"
-    mv out.py "${PBPHERE}/${fname}.py"
-    mv out.js "${PBPHERE}/${fname}.js"
+    mv out.frish "${PBPCALLER}/${fname}.frish"
+    mv out.dt "${PBPCALLER}/${fname}.dt"
+    mv out.py "${PBPCALLER}/${fname}.py"
+    mv out.js "${PBPCALLER}/${fname}.js"
 fi
 
