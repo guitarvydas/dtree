@@ -15,17 +15,17 @@ caller="$3"
 # push a new value of PBPWD onto the stack, which will get unwound to its previous value when this script ends
 PBPWD="$(pwd)"
 
-echo >&2
-echo '@@@@@ dtree RUN @@@@@' >&2
+echo >>/tmp/pbplog.md
+echo '@@@@@ dtree RUN @@@@@' >>/tmp/pbplog.md
 for i in PBP PBPWD PBPCALLER caller PYTHONPATH fname
 do
-    echo "$i = ${!i}" >&2
+    echo "$i = ${!i}"  >>/tmp/pbplog.md
 done
-echo '@@@@@'
-echo
+echo '@@@@@' >>/tmp/pbplog.md
+echo >>/tmp/pbplog.md
 
 ${PBP}/das2json dtree-transmogrifier.drawio
-echo '***  'python main.py "${PBPCALLER}/${fname}.drawio" main dtree-transmogrifier.drawio.json '|' ${PBP}/splitoutputs
+echo '***  'python main.py "${PBPCALLER}/${fname}.drawio" main dtree-transmogrifier.drawio.json '|' ${PBP}/splitoutputs  >>/tmp/pbplog.md
 python main.py "${PBPCALLER}/${fname}.drawio" main dtree-transmogrifier.drawio.json | ${PBP}/splitoutputs
 if [ -f out.✗ ]
 then
