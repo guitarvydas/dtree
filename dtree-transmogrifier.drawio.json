@@ -148,6 +148,10 @@
       {
         "name": ":$ _/indent",
         "id": 5
+      },
+      {
+        "name": "🚫",
+        "id": 9
       }
     ],
     "connections": [
@@ -161,12 +165,16 @@
         }
       },
       {
-        "dir": 2,
+        "dir": 1,
         "source_port": "✗",
-        "target_port": "✗",
+        "target_port": "",
         "source": {
           "name": ":$ _/indent",
           "id": 5
+        },
+        "target": {
+          "name": "🚫",
+          "id": 9
         }
       },
       {
@@ -176,6 +184,15 @@
         "source": {
           "name": ":$ _/indent",
           "id": 5
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "",
+        "target_port": "✗",
+        "source": {
+          "name": "🚫",
+          "id": 9
         }
       }
     ],
@@ -742,6 +759,10 @@
       {
         "name": ":$ ./process_json_jq.bash",
         "id": 5
+      },
+      {
+        "name": "🚫",
+        "id": 10
       }
     ],
     "connections": [
@@ -755,6 +776,19 @@
         }
       },
       {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": ":$ ./process_json_jq.bash",
+          "id": 5
+        },
+        "target": {
+          "name": "🚫",
+          "id": 10
+        }
+      },
+      {
         "dir": 2,
         "source_port": "",
         "target_port": "",
@@ -765,11 +799,11 @@
       },
       {
         "dir": 2,
-        "source_port": "✗",
+        "source_port": "",
         "target_port": "✗",
         "source": {
-          "name": ":$ ./process_json_jq.bash",
-          "id": 5
+          "name": "🚫",
+          "id": 10
         }
       }
     ],
@@ -781,6 +815,10 @@
       {
         "name": ":$ jq 'map(if has(\"cells\") then .cells |= map(.attributes | del(.drawio_id)) else . end)'",
         "id": 5
+      },
+      {
+        "name": "🚫",
+        "id": 11
       }
     ],
     "connections": [
@@ -794,6 +832,19 @@
         }
       },
       {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": ":$ jq 'map(if has(\"cells\") then .cells |= map(.attributes | del(.drawio_id)) else . end)'",
+          "id": 5
+        },
+        "target": {
+          "name": "🚫",
+          "id": 11
+        }
+      },
+      {
         "dir": 2,
         "source_port": "",
         "target_port": "",
@@ -804,11 +855,11 @@
       },
       {
         "dir": 2,
-        "source_port": "✗",
+        "source_port": "",
         "target_port": "✗",
         "source": {
-          "name": ":$ jq 'map(if has(\"cells\") then .cells |= map(.attributes | del(.drawio_id)) else . end)'",
-          "id": 5
+          "name": "🚫",
+          "id": 11
         }
       }
     ],
@@ -820,6 +871,10 @@
       {
         "name": ":$ node translate.js",
         "id": 5
+      },
+      {
+        "name": "🚫",
+        "id": 10
       }
     ],
     "connections": [
@@ -833,6 +888,19 @@
         }
       },
       {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": ":$ node translate.js",
+          "id": 5
+        },
+        "target": {
+          "name": "🚫",
+          "id": 10
+        }
+      },
+      {
         "dir": 2,
         "source_port": "",
         "target_port": "",
@@ -843,11 +911,11 @@
       },
       {
         "dir": 2,
-        "source_port": "✗",
+        "source_port": "",
         "target_port": "✗",
         "source": {
-          "name": ":$ node translate.js",
-          "id": 5
+          "name": "🚫",
+          "id": 10
         }
       }
     ],

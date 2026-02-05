@@ -1,0 +1,3 @@
+#!/bin/bash
+~/projects/pbp-dev/import-minimal.bash
+./BUILD.bash
