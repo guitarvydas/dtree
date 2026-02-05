@@ -1,1 +1,1 @@
-/Users/paultarvydas/projects/dtree _/indent 
+/Users/paultarvydas/projects/dtree ./process_json_jq.bash 

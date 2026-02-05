@@ -3,6 +3,8 @@
 # Process JSON to modify edge kinds based on branchLabel cells
 # Reads from stdin, writes to stdout
 
+~/projects/pbp-dev/debug-vars "process_json_jq.bash"
+
 jq '.[0].cells |= (
     # Step 1: Extract branchLabel parent mappings
     # Create a dictionary: {parent_id: branch_value}

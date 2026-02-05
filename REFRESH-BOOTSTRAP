@@ -1,0 +1,3 @@
+#!/bin/bash
+cd ~/projects/dtree
+${HOME}/projects/pbp-dev/import-minimal.bash

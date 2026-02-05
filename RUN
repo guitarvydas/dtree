@@ -1,20 +1,31 @@
 #!/bin/bash
+# dtree
 rm -f out.*
 rm -f *.json
 set -e
 export SHELLOPTS
+cd "$2"
+
+PBPWD="$(pwd)"
 fname="$1"
+here="$2"
+caller="$3"
+./REFRESH-BOOTSTRAP
+
+# push a new value of PBPWD onto the stack, which will get unwound to its previous value when this script ends
+PBPWD="$(pwd)"
 
 echo
-echo '*****'
-for i in PBP PBPHERE PBPCALLER PYTHONPATH fname
+echo '@@@@@ dtree RUN @@@@@'
+for i in PBP PBPWD PBPCALLER caller PYTHONPATH fname
 do
     echo "$i = ${!i}"
 done
-echo '*****'
+echo '@@@@@'
 echo
 
 ${PBP}/das2json dtree-transmogrifier.drawio
+echo '***  'python main.py "${PBPCALLER}/${fname}.drawio" main dtree-transmogrifier.drawio.json '|' ${PBP}/splitoutputs
 python main.py "${PBPCALLER}/${fname}.drawio" main dtree-transmogrifier.drawio.json | ${PBP}/splitoutputs
 if [ -f out.✗ ]
 then

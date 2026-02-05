@@ -497,6 +497,10 @@
       {
         "name": "Make Remaining ID References Human Readable",
         "id": 17
+      },
+      {
+        "name": "🚫",
+        "id": 25
       }
     ],
     "connections": [
@@ -549,6 +553,58 @@
         }
       },
       {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": "Drop drawio_id",
+          "id": 13
+        },
+        "target": {
+          "name": "🚫",
+          "id": 25
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": "Make Remaining ID References Human Readable",
+          "id": 17
+        },
+        "target": {
+          "name": "🚫",
+          "id": 25
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": "Detect Edge Kinds",
+          "id": 9
+        },
+        "target": {
+          "name": "🚫",
+          "id": 25
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": "Decision Tree Diagram to JSON",
+          "id": 5
+        },
+        "target": {
+          "name": "🚫",
+          "id": 25
+        }
+      },
+      {
         "dir": 2,
         "source_port": "",
         "target_port": "",
@@ -559,38 +615,11 @@
       },
       {
         "dir": 2,
-        "source_port": "✗",
+        "source_port": "",
         "target_port": "✗",
         "source": {
-          "name": "Drop drawio_id",
-          "id": 13
-        }
-      },
-      {
-        "dir": 2,
-        "source_port": "✗",
-        "target_port": "✗",
-        "source": {
-          "name": "Make Remaining ID References Human Readable",
-          "id": 17
-        }
-      },
-      {
-        "dir": 2,
-        "source_port": "✗",
-        "target_port": "✗",
-        "source": {
-          "name": "Detect Edge Kinds",
-          "id": 9
-        }
-      },
-      {
-        "dir": 2,
-        "source_port": "✗",
-        "target_port": "✗",
-        "source": {
-          "name": "Decision Tree Diagram to JSON",
-          "id": 5
+          "name": "🚫",
+          "id": 25
         }
       }
     ],
@@ -665,7 +694,7 @@
     "name": "Detect Edge Kinds",
     "children": [
       {
-        "name": ":$ ./process_json_jq.bash",
+        "name": ":$ ./process_json_jq.bash",
         "id": 5
       }
     ],
@@ -675,7 +704,7 @@
         "source_port": "",
         "target_port": "",
         "target": {
-          "name": ":$ ./process_json_jq.bash",
+          "name": ":$ ./process_json_jq.bash",
           "id": 5
         }
       },
@@ -684,7 +713,7 @@
         "source_port": "",
         "target_port": "",
         "source": {
-          "name": ":$ ./process_json_jq.bash",
+          "name": ":$ ./process_json_jq.bash",
           "id": 5
         }
       },
@@ -693,7 +722,7 @@
         "source_port": "✗",
         "target_port": "✗",
         "source": {
-          "name": ":$ ./process_json_jq.bash",
+          "name": ":$ ./process_json_jq.bash",
           "id": 5
         }
       }

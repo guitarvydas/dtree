@@ -35,27 +35,13 @@ function exit_rule (name) {
 }
 
 const grammar = String.raw`
-dt {
-  Main = YesNo
-  YesNo = "[" text YesBranch NoBranch "]"
-
-  YesBranch = "|" "yes" ":" (YesNo | text)
-  NoBranch = "|" "no" ":" (YesNo | text)
-
-  text = char+
-  
+cleanup {
+  main = char+
   char =
-    | "\n" -- newline
-    | "?" -- questionmark
-    | "%" -- percent
-    | "&lt;div&gt;" -- begindiv
-    | "&lt;/div&gt;" -- enddiv
-    | "&lt;span" (~"&gt;" any)* "&gt;" -- beginspan
-    | "&lt;/span&gt;" -- endspan
-    | "@" -- at
-    | space+ &(~alnum) -- space
-    | space -- nonbreakingspace
-    | (~space ~"[" ~"]" ~"|" ~"yes" ~"no" ~":" ~"&" ~";" any) -- other
+    | ",\n}" -- commanlbrace
+    | ",}" -- commabrace
+    | "},]" -- bracecommabracket
+    | any -- c
 }
 `;
 
@@ -135,85 +121,30 @@ function getParameter (name) {
 
 let _rewrite = {
 
-Main : function (YesNo,) {
-enter_rule ("Main");
-    set_return (`${YesNo.rwr ()}`);
-return exit_rule ("Main");
-},
-YesNo : function (lb,text,y,n,rb,) {
-enter_rule ("YesNo");
-    set_return (`if (${text.rwr ()}) {⤷${y.rwr ()}⤶\n} else {⤷${n.rwr ()}⤶\n}`);
-return exit_rule ("YesNo");
-},
-YesBranch : function (_or,_yes,_,x,) {
-enter_rule ("YesBranch");
-    set_return (`\n${x.rwr ()}`);
-return exit_rule ("YesBranch");
-},
-NoBranch : function (_or,_no,_,x,) {
-enter_rule ("NoBranch");
-    set_return (`\n${x.rwr ()}`);
-return exit_rule ("NoBranch");
-},
-text : function (cs,) {
-enter_rule ("text");
+main : function (cs,) {
+enter_rule ("main");
     set_return (`${cs.rwr ().join ('')}`);
-return exit_rule ("text");
+return exit_rule ("main");
 },
-char_newline : function (_,) {
-enter_rule ("char_newline");
-    set_return (``);
-return exit_rule ("char_newline");
+char_commanlbrace : function (_,) {
+enter_rule ("char_commanlbrace");
+    set_return (`\n}`);
+return exit_rule ("char_commanlbrace");
 },
-char_questionmark : function (_,) {
-enter_rule ("char_questionmark");
-    set_return (``);
-return exit_rule ("char_questionmark");
+char_commabrace : function (_,) {
+enter_rule ("char_commabrace");
+    set_return (`}`);
+return exit_rule ("char_commabrace");
 },
-char_percent : function (_,) {
-enter_rule ("char_percent");
-    set_return (`%`);
-return exit_rule ("char_percent");
+char_bracecommabracket : function (_,) {
+enter_rule ("char_bracecommabracket");
+    set_return (`}]`);
+return exit_rule ("char_bracecommabracket");
 },
-char_begindiv : function (_,) {
-enter_rule ("char_begindiv");
-    set_return (``);
-return exit_rule ("char_begindiv");
-},
-char_enddiv : function (_,) {
-enter_rule ("char_enddiv");
-    set_return (``);
-return exit_rule ("char_enddiv");
-},
-char_beginspan : function (lb,cs,rb,) {
-enter_rule ("char_beginspan");
-    set_return (``);
-return exit_rule ("char_beginspan");
-},
-char_endspan : function (_,) {
-enter_rule ("char_endspan");
-    set_return (``);
-return exit_rule ("char_endspan");
-},
-char_at : function (_,) {
-enter_rule ("char_at");
-    set_return (`%funcall `);
-return exit_rule ("char_at");
-},
-char_space : function (_,) {
-enter_rule ("char_space");
-    set_return (``);
-return exit_rule ("char_space");
-},
-char_nonbreakingspace : function (_,) {
-enter_rule ("char_nonbreakingspace");
-    set_return (` `);
-return exit_rule ("char_nonbreakingspace");
-},
-char_other : function (c,) {
-enter_rule ("char_other");
+char_c : function (c,) {
+enter_rule ("char_c");
     set_return (`${c.rwr ()}`);
-return exit_rule ("char_other");
+return exit_rule ("char_c");
 },
 _terminal: function () { return this.sourceString; },
 _iter: function (...children) { return children.map(c => c.rwr ()); }
