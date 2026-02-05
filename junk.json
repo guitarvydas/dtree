@@ -1,3 +1,8 @@
+@@@@@
+
+***  python main.py /Users/paultarvydas/projects/dtree/example.drawio main dtree-transmogrifier.drawio.json | /Users/paultarvydas/projects/pbp-dev/splitoutputs
+
+>> ERROR <<
 [
   {
     "type": "diagram",

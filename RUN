@@ -30,7 +30,7 @@ python main.py "${PBPCALLER}/${fname}.drawio" main dtree-transmogrifier.drawio.j
 if [ -f out.✗ ]
 then
     echo
-    echo "ERROR"
+    echo ">> ERROR <<"
     cat out.✗
 else
     mv out.frish "${PBPCALLER}/${fname}.frish"

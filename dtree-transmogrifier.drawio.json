@@ -543,6 +543,10 @@
       {
         "name": "🚫",
         "id": 25
+      },
+      {
+        "name": "Normalize to Array",
+        "id": 28
       }
     ],
     "connections": [
@@ -564,8 +568,8 @@
           "id": 5
         },
         "target": {
-          "name": "Detect Edge Kinds",
-          "id": 9
+          "name": "Normalize to Array",
+          "id": 28
         }
       },
       {
@@ -640,6 +644,32 @@
         "source": {
           "name": "Decision Tree Diagram to JSON",
           "id": 5
+        },
+        "target": {
+          "name": "🚫",
+          "id": 25
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": "Normalize to Array",
+          "id": 28
+        },
+        "target": {
+          "name": "Detect Edge Kinds",
+          "id": 9
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": "Normalize to Array",
+          "id": 28
         },
         "target": {
           "name": "🚫",
@@ -960,6 +990,45 @@
         "dir": 3,
         "source_port": "",
         "target_port": ""
+      }
+    ],
+    "file": "dtree-transmogrifier.drawio"
+  },
+  {
+    "name": "Normalize to Array",
+    "children": [
+      {
+        "name": ":$ jq '(if type == \"array\" then . else [.] end)'",
+        "id": 5
+      }
+    ],
+    "connections": [
+      {
+        "dir": 0,
+        "source_port": "",
+        "target_port": "",
+        "target": {
+          "name": ":$ jq '(if type == \"array\" then . else [.] end)'",
+          "id": 5
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":$ jq '(if type == \"array\" then . else [.] end)'",
+          "id": 5
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "✗",
+        "target_port": "✗",
+        "source": {
+          "name": ":$ jq '(if type == \"array\" then . else [.] end)'",
+          "id": 5
+        }
       }
     ],
     "file": "dtree-transmogrifier.drawio"

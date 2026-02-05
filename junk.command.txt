@@ -1,1 +1,1 @@
-/Users/paultarvydas/projects/dtree ./process_json_jq.bash 
+/Users/paultarvydas/projects/dtree jq '(if type == "array" then . else [.] end)' 
