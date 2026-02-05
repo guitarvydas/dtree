@@ -15,18 +15,13 @@ caller="$3"
 # push a new value of PBPWD onto the stack, which will get unwound to its previous value when this script ends
 PBPWD="$(pwd)"
 
-echo >>/tmp/pbplog.md
-echo '@@@@@ dtree RUN @@@@@' >>/tmp/pbplog.md
-for i in PBP PBPWD PBPCALLER caller PYTHONPATH fname
-do
-    echo "$i = ${!i}"  >>/tmp/pbplog.md
-done
-echo '@@@@@' >>/tmp/pbplog.md
-echo >>/tmp/pbplog.md
-
+# convert dtree tool diagram to JSON
 ${PBP}/das2json dtree-transmogrifier.drawio
-echo '***  'python main.py "${PBPCALLER}/${fname}.drawio" main dtree-transmogrifier.drawio.json '|' ${PBP}/splitoutputs  >>/tmp/pbplog.md
+
+# run the tool on the given filename
 python main.py "${PBPCALLER}/${fname}.drawio" main dtree-transmogrifier.drawio.json | ${PBP}/splitoutputs
+
+## move results to caller's working directory, if no errors
 if [ -f out.✗ ]
 then
     echo
