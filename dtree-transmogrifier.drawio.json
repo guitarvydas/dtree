@@ -793,10 +793,6 @@
       {
         "name": "🚫",
         "id": 10
-      },
-      {
-        "name": "Serial ?",
-        "id": 13
       }
     ],
     "connections": [
@@ -805,8 +801,8 @@
         "source_port": "",
         "target_port": "",
         "target": {
-          "name": "Serial ?",
-          "id": 13
+          "name": ":$ ./process_json_jq.bash",
+          "id": 5
         }
       },
       {
@@ -820,19 +816,6 @@
         "target": {
           "name": "🚫",
           "id": 10
-        }
-      },
-      {
-        "dir": 1,
-        "source_port": "",
-        "target_port": "",
-        "source": {
-          "name": "Serial ?",
-          "id": 13
-        },
-        "target": {
-          "name": ":$ ./process_json_jq.bash",
-          "id": 5
         }
       },
       {
@@ -998,8 +981,20 @@
     "name": "Normalize to Array",
     "children": [
       {
-        "name": ":$ jq '(if type == \"array\" then . else [.] end)'",
+        "name": ":$ ./normalize.bash",
         "id": 5
+      },
+      {
+        "name": "🚫",
+        "id": 9
+      },
+      {
+        "name": "Serial ?",
+        "id": 12
+      },
+      {
+        "name": "Serial ?",
+        "id": 16
       }
     ],
     "connections": [
@@ -1008,8 +1003,21 @@
         "source_port": "",
         "target_port": "",
         "target": {
-          "name": ":$ jq '(if type == \"array\" then . else [.] end)'",
+          "name": ":$ ./normalize.bash",
           "id": 5
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": ":$ ./normalize.bash",
+          "id": 5
+        },
+        "target": {
+          "name": "🚫",
+          "id": 9
         }
       },
       {
@@ -1017,17 +1025,17 @@
         "source_port": "",
         "target_port": "",
         "source": {
-          "name": ":$ jq '(if type == \"array\" then . else [.] end)'",
+          "name": ":$ ./normalize.bash",
           "id": 5
         }
       },
       {
         "dir": 2,
-        "source_port": "✗",
+        "source_port": "",
         "target_port": "✗",
         "source": {
-          "name": ":$ jq '(if type == \"array\" then . else [.] end)'",
-          "id": 5
+          "name": "🚫",
+          "id": 9
         }
       }
     ],

@@ -1,8 +1,22 @@
-cleanup {
-  main = char+
+dt {
+  Main = YesNo
+  YesNo = "[" text YesBranch NoBranch "]"
+
+  YesBranch = "|" "yes" ":" (YesNo | text)
+  NoBranch = "|" "no" ":" (YesNo | text)
+
+  text = char+
+  
   char =
-    | ",\n}" -- commanlbrace
-    | ",}" -- commabrace
-    | "},]" -- bracecommabracket
-    | any -- c
+    | "\n" -- newline
+    | "?" -- questionmark
+    | "%" -- percent
+    | "&lt;div&gt;" -- begindiv
+    | "&lt;/div&gt;" -- enddiv
+    | "&lt;span" (~"&gt;" any)* "&gt;" -- beginspan
+    | "&lt;/span&gt;" -- endspan
+    | "@" -- at
+    | space+ &(~alnum) -- space
+    | space -- nonbreakingspace
+    | (~space ~"[" ~"]" ~"|" ~"yes" ~"no" ~":" ~"&" ~";" any) -- other
 }

@@ -1,1 +1,1 @@
-/Users/paultarvydas/projects/dtree jq '(if type == "array" then . else [.] end)' 
+/Users/paultarvydas/projects/dtree _/indent 
