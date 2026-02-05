@@ -1,0 +1,292 @@
+$ ./BUILD.bash
+/Users/paultarvydas/projects/pbp-dev/kernel:
+"Info" : "  @18  probe main▹Transmogrify DT▹main▹Transmogrify DT▹:?a₁₁: [
+  {
+    "type": "diagram",
+    "attributes": {
+      "id": "d2",
+      "name": "dtree",
+      "drawio_id": "brDq65to_PZeKpkbbApS"
+    },
+    "cells": [
+      {
+        "id": "c3"
+      },
+      {
+        "id": "c4",
+        "parent": "c3"
+      },
+      {
+        "id": "c5",
+        "parent": "c4",
+        "source": "c9",
+        "target": "c14",
+        "kind": "trueEdge"
+      },
+      {
+        "id": "c7",
+        "parent": "c4",
+        "source": "c9",
+        "target": "c19",
+        "kind": "falseEdge"
+      },
+      {
+        "id": "c9",
+        "text": "found?",
+        "kind": "rhombus",
+        "parent": "c4"
+      },
+      {
+        "id": "c10",
+        "parent": "c4",
+        "source": "c14",
+        "target": "c24",
+        "kind": "trueEdge"
+      },
+      {
+        "id": "c12",
+        "parent": "c4",
+        "source": "c14",
+        "target": "c47",
+        "kind": "falseEdge"
+      },
+      {
+        "id": "c14",
+        "text": "%in&lt;div&gt;compiling&lt;/div&gt;&lt;div&gt;state?&lt;/div&gt;",
+        "kind": "rhombus",
+        "parent": "c4"
+      },
+      {
+        "id": "c15",
+        "parent": "c4",
+        "source": "c19",
+        "target": "c29",
+        "kind": "falseEdge"
+      },
+      {
+        "id": "c17",
+        "parent": "c4",
+        "source": "c19",
+        "target": "c39",
+        "kind": "trueEdge"
+      },
+      {
+        "id": "c19",
+        "text": "%in&lt;div&gt;compiling&lt;/div&gt;&lt;div&gt;state?&lt;/div&gt;",
+        "kind": "rhombus",
+        "parent": "c4"
+      },
+      {
+        "id": "c20",
+        "parent": "c4",
+        "source": "c24",
+        "target": "c45",
+        "kind": "trueEdge"
+      },
+      {
+        "id": "c22",
+        "parent": "c4",
+        "source": "c24",
+        "target": "c46",
+        "kind": "falseEdge"
+      },
+      {
+        "id": "c24",
+        "text": "found&lt;div&gt;immediate&lt;/div&gt;&lt;div&gt;?&lt;/div&gt;",
+        "kind": "rhombus",
+        "parent": "c4"
+      },
+      {
+        "id": "c25",
+        "parent": "c4",
+        "source": "c29",
+        "target": "c34",
+        "kind": "falseEdge"
+      },
+      {
+        "id": "c27",
+        "parent": "c4",
+        "source": "c29",
+        "target": "c51",
+        "kind": "trueEdge"
+      },
+      {
+        "id": "c29",
+        "text": "%is&lt;div&gt;integer&lt;div&gt;(item)?&lt;/div&gt;&lt;/div&gt;",
+        "kind": "rhombus",
+        "parent": "c4"
+      },
+      {
+        "id": "c30",
+        "parent": "c4",
+        "source": "c34",
+        "target": "c53",
+        "kind": "falseEdge"
+      },
+      {
+        "id": "c32",
+        "parent": "c4",
+        "source": "c34",
+        "target": "c52",
+        "kind": "trueEdge"
+      },
+      {
+        "id": "c34",
+        "text": "%is&lt;div&gt;float&lt;/div&gt;&lt;div&gt;(item)&lt;/div&gt;&lt;div&gt;?&lt;/div&gt;",
+        "kind": "rhombus",
+        "parent": "c4"
+      },
+      {
+        "id": "c35",
+        "parent": "c4",
+        "source": "c39",
+        "target": "c44",
+        "kind": "falseEdge"
+      },
+      {
+        "id": "c37",
+        "parent": "c4",
+        "source": "c39",
+        "target": "c48",
+        "kind": "trueEdge"
+      },
+      {
+        "id": "c39",
+        "text": "%is&lt;div&gt;integer&lt;div&gt;(item)&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;?&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;",
+        "kind": "rhombus",
+        "parent": "c4"
+      },
+      {
+        "id": "c40",
+        "parent": "c4",
+        "source": "c44",
+        "target": "c50",
+        "kind": "falseEdge"
+      },
+      {
+        "id": "c42",
+        "parent": "c4",
+        "source": "c44",
+        "target": "c49",
+        "kind": "trueEdge"
+      },
+      {
+        "id": "c44",
+        "text": "%is&lt;div&gt;float&lt;/div&gt;&lt;div&gt;(item)&lt;/div&gt;&lt;div&gt;?&lt;/div&gt;",
+        "kind": "rhombus",
+        "parent": "c4"
+      },
+      {
+        "id": "c45",
+        "text": "@exec&lt;div&gt;(item)&lt;/div&gt;",
+        "kind": "process",
+        "parent": "c4"
+      },
+      {
+        "id": "c46",
+        "text": "@compile&lt;div&gt;word&lt;/div&gt;&lt;div&gt;(item&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;)&lt;/span&gt;&lt;/div&gt;",
+        "kind": "process",
+        "parent": "c4"
+      },
+      {
+        "id": "c47",
+        "text": "@exec&lt;div&gt;(item)&lt;/div&gt;",
+        "kind": "process",
+        "parent": "c4"
+      },
+      {
+        "id": "c48",
+        "text": "@compile&lt;div&gt;integer&lt;/div&gt;&lt;div&gt;(item)&lt;/div&gt;",
+        "kind": "process",
+        "parent": "c4"
+      },
+      {
+        "id": "c49",
+        "text": "@compile&lt;div&gt;float&lt;/div&gt;&lt;div&gt;(item)&lt;/div&gt;",
+        "kind": "process",
+        "parent": "c4"
+      },
+      {
+        "id": "c50",
+        "text": "%return False",
+        "kind": "process",
+        "parent": "c4"
+      },
+      {
+        "id": "c51",
+        "text": "@push as integer&lt;div&gt;(item)&lt;/div&gt;",
+        "kind": "process",
+        "parent": "c4"
+      },
+      {
+        "id": "c52",
+        "text": "@push as float&lt;div&gt;(item)&lt;/div&gt;",
+        "kind": "process",
+        "parent": "c4"
+      },
+      {
+        "id": "c53",
+        "text": "%return False",
+        "kind": "process",
+        "parent": "c4"
+      }
+    ]
+  },
+  {
+    "map": {
+      "0": "c3",
+      "1": "c4",
+      "brDq65to_PZeKpkbbApS": "d2",
+      "zTViIhP_tUskBqKQNT3X-1": "c5",
+      "zTViIhP_tUskBqKQNT3X-2": "c6",
+      "zTViIhP_tUskBqKQNT3X-3": "c7",
+      "zTViIhP_tUskBqKQNT3X-4": "c8",
+      "zTViIhP_tUskBqKQNT3X-5": "c9",
+      "zTViIhP_tUskBqKQNT3X-6": "c10",
+      "zTViIhP_tUskBqKQNT3X-7": "c11",
+      "zTViIhP_tUskBqKQNT3X-8": "c12",
+      "zTViIhP_tUskBqKQNT3X-9": "c13",
+      "zTViIhP_tUskBqKQNT3X-10": "c14",
+      "zTViIhP_tUskBqKQNT3X-11": "c15",
+      "zTViIhP_tUskBqKQNT3X-12": "c16",
+      "zTViIhP_tUskBqKQNT3X-13": "c17",
+      "zTViIhP_tUskBqKQNT3X-14": "c18",
+      "zTViIhP_tUskBqKQNT3X-15": "c19",
+      "zTViIhP_tUskBqKQNT3X-16": "c20",
+      "zTViIhP_tUskBqKQNT3X-17": "c21",
+      "zTViIhP_tUskBqKQNT3X-18": "c22",
+      "zTViIhP_tUskBqKQNT3X-19": "c23",
+      "zTViIhP_tUskBqKQNT3X-20": "c24",
+      "zTViIhP_tUskBqKQNT3X-24": "c25",
+      "zTViIhP_tUskBqKQNT3X-25": "c26",
+      "zTViIhP_tUskBqKQNT3X-26": "c27",
+      "zTViIhP_tUskBqKQNT3X-27": "c28",
+      "zTViIhP_tUskBqKQNT3X-28": "c29",
+      "zTViIhP_tUskBqKQNT3X-29": "c30",
+      "zTViIhP_tUskBqKQNT3X-30": "c31",
+      "zTViIhP_tUskBqKQNT3X-31": "c32",
+      "zTViIhP_tUskBqKQNT3X-32": "c33",
+      "zTViIhP_tUskBqKQNT3X-33": "c34",
+      "zTViIhP_tUskBqKQNT3X-37": "c35",
+      "zTViIhP_tUskBqKQNT3X-38": "c36",
+      "zTViIhP_tUskBqKQNT3X-39": "c37",
+      "zTViIhP_tUskBqKQNT3X-40": "c38",
+      "zTViIhP_tUskBqKQNT3X-41": "c39",
+      "zTViIhP_tUskBqKQNT3X-42": "c40",
+      "zTViIhP_tUskBqKQNT3X-43": "c41",
+      "zTViIhP_tUskBqKQNT3X-44": "c42",
+      "zTViIhP_tUskBqKQNT3X-45": "c43",
+      "zTViIhP_tUskBqKQNT3X-46": "c44",
+      "dRkQnjKu9n-pmXYVSlKa-1": "c45",
+      "dRkQnjKu9n-pmXYVSlKa-2": "c46",
+      "dRkQnjKu9n-pmXYVSlKa-3": "c47",
+      "dRkQnjKu9n-pmXYVSlKa-4": "c48",
+      "dRkQnjKu9n-pmXYVSlKa-5": "c49",
+      "dRkQnjKu9n-pmXYVSlKa-6": "c50",
+      "dRkQnjKu9n-pmXYVSlKa-7": "c51",
+      "dRkQnjKu9n-pmXYVSlKa-8": "c52",
+      "dRkQnjKu9n-pmXYVSlKa-9": "c53"
+    }
+  }
+]"
+"Info" : "  @19  probe main▹Transmogrify DT▹main▹Transmogrify DT▹:?b₁₂: [ found? | yes: [ %in&lt;div&gt;compiling&lt;/div&gt;&lt;div&gt;state?&lt;/div&gt; | yes: [ found&lt;div&gt;immediate&lt;/div&gt;&lt;div&gt;?&lt;/div&gt; | yes: @exec&lt;div&gt;(item)&lt;/div&gt; | no: @compile&lt;div&gt;word&lt;/div&gt;&lt;div&gt;(item&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;)&lt;/span&gt;&lt;/div&gt; ] | no: @exec&lt;div&gt;(item)&lt;/div&gt; ] | no: [ %in&lt;div&gt;compiling&lt;/div&gt;&lt;div&gt;state?&lt;/div&gt; | yes: [ %is&lt;div&gt;integer&lt;div&gt;(item)&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;?&lt;/span&gt;&lt;/div&gt;&lt;/div&gt; | yes: @compile&lt;div&gt;integer&lt;/div&gt;&lt;div&gt;(item)&lt;/div&gt; | no: [ %is&lt;div&gt;float&lt;/div&gt;&lt;div&gt;(item)&lt;/div&gt;&lt;div&gt;?&lt;/div&gt; | yes: @compile&lt;div&gt;float&lt;/div&gt;&lt;div&gt;(item)&lt;/div&gt; | no: %return False ] ] | no: [ %is&lt;div&gt;integer&lt;div&gt;(item)?&lt;/div&gt;&lt;/div&gt; | yes: @push as integer&lt;div&gt;(item)&lt;/div&gt; | no: [ %is&lt;div&gt;float&lt;/div&gt;&lt;div&gt;(item)&lt;/div&gt;&lt;div&gt;?&lt;/div&gt; | yes: @push as float&lt;div&gt;(item)&lt;/div&gt; | no: %return False ] ] ] ]"
