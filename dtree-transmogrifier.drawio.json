@@ -13,6 +13,10 @@
       {
         "name": "Convert Diagram to Culled JSON",
         "id": 19
+      },
+      {
+        "name": "🚫",
+        "id": 23
       }
     ],
     "connections": [
@@ -27,6 +31,19 @@
       },
       {
         "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": "Convert Diagram to Culled JSON",
+          "id": 19
+        },
+        "target": {
+          "name": "🚫",
+          "id": 23
+        }
+      },
+      {
+        "dir": 1,
         "source_port": "",
         "target_port": "",
         "source": {
@@ -36,6 +53,19 @@
         "target": {
           "name": "Convert Diagram to Culled JSON",
           "id": 19
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": "Read Text File",
+          "id": 8
+        },
+        "target": {
+          "name": "🚫",
+          "id": 23
         }
       },
       {
@@ -52,30 +82,16 @@
         }
       },
       {
-        "dir": 2,
+        "dir": 1,
         "source_port": "✗",
-        "target_port": "✗",
-        "source": {
-          "name": "Convert Diagram to Culled JSON",
-          "id": 19
-        }
-      },
-      {
-        "dir": 2,
-        "source_port": "✗",
-        "target_port": "✗",
-        "source": {
-          "name": "Read Text File",
-          "id": 8
-        }
-      },
-      {
-        "dir": 2,
-        "source_port": "✗",
-        "target_port": "✗",
+        "target_port": "",
         "source": {
           "name": "Transmogrify DT",
           "id": 12
+        },
+        "target": {
+          "name": "🚫",
+          "id": 23
         }
       },
       {
@@ -112,6 +128,15 @@
         "source": {
           "name": "Transmogrify DT",
           "id": 12
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "",
+        "target_port": "✗",
+        "source": {
+          "name": "🚫",
+          "id": 23
         }
       }
     ],
@@ -635,6 +660,10 @@
       {
         "name": ":$ _/t2t cleanup",
         "id": 9
+      },
+      {
+        "name": "🚫",
+        "id": 15
       }
     ],
     "connections": [
@@ -645,6 +674,32 @@
         "target": {
           "name": ":$ _/t2t dtree",
           "id": 5
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": ":$ _/t2t dtree",
+          "id": 5
+        },
+        "target": {
+          "name": "🚫",
+          "id": 15
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": ":$ _/t2t cleanup",
+          "id": 9
+        },
+        "target": {
+          "name": "🚫",
+          "id": 15
         }
       },
       {
@@ -662,15 +717,6 @@
       },
       {
         "dir": 2,
-        "source_port": "✗",
-        "target_port": "✗",
-        "source": {
-          "name": ":$ _/t2t dtree",
-          "id": 5
-        }
-      },
-      {
-        "dir": 2,
         "source_port": "",
         "target_port": "",
         "source": {
@@ -680,11 +726,11 @@
       },
       {
         "dir": 2,
-        "source_port": "✗",
+        "source_port": "",
         "target_port": "✗",
         "source": {
-          "name": ":$ _/t2t cleanup",
-          "id": 9
+          "name": "🚫",
+          "id": 15
         }
       }
     ],
