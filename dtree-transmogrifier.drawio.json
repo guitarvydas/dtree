@@ -763,6 +763,10 @@
       {
         "name": "🚫",
         "id": 10
+      },
+      {
+        "name": "Serial ?",
+        "id": 13
       }
     ],
     "connections": [
@@ -771,8 +775,8 @@
         "source_port": "",
         "target_port": "",
         "target": {
-          "name": ":$ ./process_json_jq.bash",
-          "id": 5
+          "name": "Serial ?",
+          "id": 13
         }
       },
       {
@@ -786,6 +790,19 @@
         "target": {
           "name": "🚫",
           "id": 10
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": "Serial ?",
+          "id": 13
+        },
+        "target": {
+          "name": ":$ ./process_json_jq.bash",
+          "id": 5
         }
       },
       {
@@ -917,6 +934,32 @@
           "name": "🚫",
           "id": 10
         }
+      }
+    ],
+    "file": "dtree-transmogrifier.drawio"
+  },
+  {
+    "name": "Serial ?",
+    "children": [
+      {
+        "name": ":?serial probe",
+        "id": 4
+      }
+    ],
+    "connections": [
+      {
+        "dir": 0,
+        "source_port": "",
+        "target_port": "",
+        "target": {
+          "name": ":?serial probe",
+          "id": 4
+        }
+      },
+      {
+        "dir": 3,
+        "source_port": "",
+        "target_port": ""
       }
     ],
     "file": "dtree-transmogrifier.drawio"
