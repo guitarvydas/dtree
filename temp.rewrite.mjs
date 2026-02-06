@@ -17,44 +17,49 @@ function getParameter (name) {
 
 let _rewrite = {
 
-Main : function (YesNo,) {
+Main : function (choice,) {
 enter_rule ("Main");
-    set_return (`${YesNo.rwr ()}`);
+    set_return (`${choice.rwr ()}`);
 return exit_rule ("Main");
 },
-YesNo : function (lb,text,y,n,rb,) {
-enter_rule ("YesNo");
-    set_return (`if (${text.rwr ()}) {⤷${y.rwr ()}⤶\n} else {⤷${n.rwr ()}⤶\n}`);
-return exit_rule ("YesNo");
+Choice : function (lb,pred,or1,yes,colon1,yesbranch,or2,no,colon2,nobranch,rb,) {
+enter_rule ("Choice");
+    set_return (`if ${pred.rwr ()}:⤷${yesbranch.rwr ()}⤶\nelse:⤷${nobranch.rwr ()}${rb.rwr ()}`);
+return exit_rule ("Choice");
 },
-YesBranch : function (_or,_yes,_,x,) {
-enter_rule ("YesBranch");
-    set_return (`\n${x.rwr ()}`);
-return exit_rule ("YesBranch");
+Branch : function (x,) {
+enter_rule ("Branch");
+    set_return (`${x.rwr ()}`);
+return exit_rule ("Branch");
 },
-NoBranch : function (_or,_no,_,x,) {
-enter_rule ("NoBranch");
-    set_return (`\n${x.rwr ()}`);
-return exit_rule ("NoBranch");
+Predicate : function (function_call,) {
+enter_rule ("Predicate");
+    set_return (`${function_call.rwr ()} ()`);
+return exit_rule ("Predicate");
 },
-text : function (cs,) {
-enter_rule ("text");
+Action : function (function_call,) {
+enter_rule ("Action");
+    set_return (`${function_call.rwr ()} ()`);
+return exit_rule ("Action");
+},
+function_call : function (cs,) {
+enter_rule ("function_call");
     set_return (`${cs.rwr ().join ('')}`);
-return exit_rule ("text");
+return exit_rule ("function_call");
 },
 char_newline : function (_,) {
 enter_rule ("char_newline");
-    set_return (``);
+    set_return (`_`);
 return exit_rule ("char_newline");
 },
 char_questionmark : function (_,) {
 enter_rule ("char_questionmark");
-    set_return (``);
+    set_return (`_p`);
 return exit_rule ("char_questionmark");
 },
 char_percent : function (_,) {
 enter_rule ("char_percent");
-    set_return (`%`);
+    set_return (``);
 return exit_rule ("char_percent");
 },
 char_begindiv : function (_,) {
@@ -79,7 +84,7 @@ return exit_rule ("char_endspan");
 },
 char_at : function (_,) {
 enter_rule ("char_at");
-    set_return (`%funcall `);
+    set_return (``);
 return exit_rule ("char_at");
 },
 char_space : function (_,) {
@@ -89,7 +94,7 @@ return exit_rule ("char_space");
 },
 char_nonbreakingspace : function (_,) {
 enter_rule ("char_nonbreakingspace");
-    set_return (` `);
+    set_return (`_`);
 return exit_rule ("char_nonbreakingspace");
 },
 char_other : function (c,) {
