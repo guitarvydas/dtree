@@ -2,8 +2,6 @@
 
 ### dtree ###
 
-#!/usr/bin/env bash
-
 set -e
 export SHELLOPTS
 
@@ -15,6 +13,7 @@ if [ "$#" -eq 0 ]; then
     export PBP=~/projects/pbp-dev
     export PYTHONPATH="${PBP}/kernel:${PYTHONPATH}"
     export PBPCALLER=$PBPWD
+    fname="example"
     # import any new versions of pbp and kernel
     ./REFRESH-BOOTSTRAP
     ${PBP}/resetlog
