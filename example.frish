@@ -1,9 +1,9 @@
-if found ():if incompilingstate ():if foundimmediate ():exec(item) ()
+if found ():if #incompilingstate ():if foundimmediate ():exec(item) ()
         else:compileword(item) ()]
         else:exec(item) ()]
-        else:if incompilingstate ():if isinteger(item) ():compileinteger(item) ()
+        else:if #incompilingstate ():if isinteger(item) ():compileinteger(item) ()
                 else:if isfloat(item) ():compilefloat(item) ()
-                    else:fail ()]]
+                    else:fail() ()]]
                     else:if isinteger(item) ():push_as_integer(item) ()
                         else:if isfloat(item) ():push_as_float(item) ()
-                            else:fail ()]]]]
+                            else:fail() ()]]]]
