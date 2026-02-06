@@ -1,0 +1,48 @@
+[ found
+    |yes:
+        
+        [ incompilingstate
+            |yes:
+                
+                [ foundimmediate
+                    |yes:
+                        exec(item)
+                    |no:
+                        compileword(item)
+                ]
+        |no:
+            exec(item)
+    ]
+|no:
+    
+    [ incompilingstate
+        |yes:
+            
+            [ isinteger(item)
+                |yes:
+                    compileinteger(item)
+                |no:
+                    
+                    [ isfloat(item)
+                        |yes:
+                            compilefloat(item)
+                        |no:
+                            fail()
+                    ]
+        ]
+|no:
+    
+    [ isinteger(item)
+        |yes:
+            pushasinteger(item)
+        |no:
+            
+            [ isfloat(item)
+                |yes:
+                    pushasfloat(item)
+                |no:
+                    fail()
+            ]
+]
+]
+]

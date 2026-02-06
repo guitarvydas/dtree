@@ -13,7 +13,15 @@ if [ "$#" -eq 0 ]; then
     export PBP=~/projects/pbp-dev
     export PYTHONPATH="${PBP}/kernel:${PYTHONPATH}"
     export PBPCALLER=$PBPWD
-    fname="example"
+
+    # each target language must have a decision tree diagram with legal code inside of it for the target
+    # this transmogrifier will create code for all three targets, but, the code might not be legal
+    # for example, .frish uses syntax that is illegal in python
+    # pick one of the three below, 
+    #fname="example_frish"
+    #fname="example_js"
+    fname="example_py"
+
     # import any new versions of pbp and kernel
     ./REFRESH-BOOTSTRAP
     ${PBP}/resetlog

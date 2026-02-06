@@ -24,7 +24,7 @@ return exit_rule ("Main");
 },
 Choice : function (lb,pred,or1,yes,colon1,yesbranch,or2,no,colon2,nobranch,rb,) {
 enter_rule ("Choice");
-    set_return (`if ${pred.rwr ()}:⤷${yesbranch.rwr ()}⤶\nelse:⤷${nobranch.rwr ()}${rb.rwr ()}`);
+    set_return (`if (${pred.rwr ()}) {⤷\n${yesbranch.rwr ()}⤶\n} else {⤷\n${nobranch.rwr ()}⤶\n}\n`);
 return exit_rule ("Choice");
 },
 Branch : function (x,) {
@@ -34,12 +34,12 @@ return exit_rule ("Branch");
 },
 Predicate : function (function_call,) {
 enter_rule ("Predicate");
-    set_return (`${function_call.rwr ()} ()`);
+    set_return (`%${function_call.rwr ()}`);
 return exit_rule ("Predicate");
 },
 Action : function (function_call,) {
 enter_rule ("Action");
-    set_return (`${function_call.rwr ()} ()`);
+    set_return (`return ${function_call.rwr ()}`);
 return exit_rule ("Action");
 },
 function_call : function (cs,) {
@@ -94,7 +94,7 @@ return exit_rule ("char_space");
 },
 char_nonbreakingspace : function (_,) {
 enter_rule ("char_nonbreakingspace");
-    set_return (`_`);
+    set_return (``);
 return exit_rule ("char_nonbreakingspace");
 },
 char_other : function (c,) {
