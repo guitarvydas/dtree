@@ -1,7 +1,7 @@
 [ found?
     |yes:
         
-        [ %incompilingstate?
+        [ %incompilingstate()?
             |yes:
                 
                 [ foundimmediate?
@@ -15,7 +15,7 @@
     ]
 |no:
     
-    [ %incompilingstate?
+    [ %incompilingstate()?
         |yes:
             
             [ %isinteger(item)?

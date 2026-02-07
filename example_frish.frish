@@ -1,36 +1,36 @@
-if (%found_p) {
-    if (%incompilingstate_p) {
-        if (%foundimmediate_p) {
-            return exec(item)
+if (found) {
+    if (%incompilingstate()) {
+        if (foundimmediate) {
+            @exec(item)
         } else {
-            return compileword(item)
+            @compileword(item)
         }
         
     } else {
-        return exec(item)
+        @exec(item)
     }
     
 } else {
-    if (%incompilingstate_p) {
-        if (%isinteger(item)_p) {
-            return compileinteger(item)
+    if (%incompilingstate()) {
+        if (%isinteger(item)) {
+            @compileinteger(item)
         } else {
-            if (%isfloat(item)_p) {
-                return compilefloat(item)
+            if (%isfloat(item)) {
+                @compilefloat(item)
             } else {
-                return returnFalse
+                %returnFalse
             }
             
         }
         
     } else {
-        if (%isinteger(item)_p) {
-            return pushasinteger(item)
+        if (%isinteger(item)) {
+            @pushasinteger(item)
         } else {
-            if (%isfloat(item)_p) {
-                return pushasfloat(item)
+            if (%isfloat(item)) {
+                @pushasfloat(item)
             } else {
-                return returnFalse
+                %returnFalse
             }
             
         }

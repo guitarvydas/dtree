@@ -1,4 +1,4 @@
-% rewrite dtfrish {
+xxxx% rewrite dtfrish {
   Main [YesNo] = ‛«YesNo»’
   YesNo [lb text y n rb] = ‛if («text») {⤷«y»⤶\n} else {⤷«n»⤶\n}’
 

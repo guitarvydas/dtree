@@ -240,6 +240,10 @@
       {
         "name": "🚫",
         "id": 44
+      },
+      {
+        "name": ":?A",
+        "id": 47
       }
     ],
     "connections": [
@@ -471,6 +475,19 @@
         "target": {
           "name": "🚫",
           "id": 44
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":$ swipl tree_walk.pl",
+          "id": 8
+        },
+        "target": {
+          "name": ":?A",
+          "id": 47
         }
       },
       {

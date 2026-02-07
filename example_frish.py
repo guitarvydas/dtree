@@ -1,5 +1,5 @@
 if found_p:
-    if incompilingstate_p:
+    if incompilingstate()_p:
         if foundimmediate_p:
             return exec(item)
         else:
@@ -9,7 +9,7 @@ if found_p:
         return exec(item)
     
 else:
-    if incompilingstate_p:
+    if incompilingstate()_p:
         if isinteger(item)_p:
             return compileinteger(item)
         else:

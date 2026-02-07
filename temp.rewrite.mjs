@@ -34,12 +34,12 @@ return exit_rule ("Branch");
 },
 Predicate : function (function_call,) {
 enter_rule ("Predicate");
-    set_return (`%${function_call.rwr ()}`);
+    set_return (`${function_call.rwr ()}`);
 return exit_rule ("Predicate");
 },
 Action : function (function_call,) {
 enter_rule ("Action");
-    set_return (`return ${function_call.rwr ()}`);
+    set_return (`${function_call.rwr ()}`);
 return exit_rule ("Action");
 },
 function_call : function (cs,) {
@@ -54,12 +54,12 @@ return exit_rule ("char_newline");
 },
 char_questionmark : function (_,) {
 enter_rule ("char_questionmark");
-    set_return (`_p`);
+    set_return (``);
 return exit_rule ("char_questionmark");
 },
 char_percent : function (_,) {
 enter_rule ("char_percent");
-    set_return (``);
+    set_return (`%`);
 return exit_rule ("char_percent");
 },
 char_begindiv : function (_,) {
@@ -84,7 +84,7 @@ return exit_rule ("char_endspan");
 },
 char_at : function (_,) {
 enter_rule ("char_at");
-    set_return (``);
+    set_return (`@`);
 return exit_rule ("char_at");
 },
 char_space : function (_,) {

@@ -18,9 +18,9 @@ if [ "$#" -eq 0 ]; then
     # this transmogrifier will create code for all three targets, but, the code might not be legal
     # for example, .frish uses syntax that is illegal in python
     # pick one of the three below, 
-    #fname="example_frish"
+    fname="example_frish"
     #fname="example_js"
-    fname="example_py"
+    #fname="example_py"
 
     # import any new versions of pbp and kernel
     ./REFRESH-BOOTSTRAP
