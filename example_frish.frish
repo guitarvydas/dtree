@@ -1,33 +1,40 @@
 if (found) {
     if (%incompilingstate) {
         if (foundimmediate) {
-            %funcall exec(item)
+            λexec(item)
         } else {
-            %funcall compileword(item)
+            λcompileword(item)
         }
+        
     } else {
-        %funcall exec(item)
+        λexec(item)
     }
+    
 } else {
     if (%incompilingstate) {
         if (%isinteger(item)) {
-            %funcall compileinteger(item)
+            λcompileinteger(item)
         } else {
             if (%isfloat(item)) {
-                %funcall compilefloat(item)
+                λcompilefloat(item)
             } else {
-                %return False
+                @returnFalse
             }
+            
         }
+        
     } else {
         if (%isinteger(item)) {
-            %funcall push as integer(item)
+            λpushasinteger(item)
         } else {
             if (%isfloat(item)) {
-                %funcall push as float(item)
+                λpushasfloat(item)
             } else {
-                %return False
+                @returnFalse
             }
+            
         }
+        
     }
+    
 }

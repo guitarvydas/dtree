@@ -1,12 +1,10 @@
-dt {
-  Main = YesNo
-  YesNo = "[" text YesBranch NoBranch "]"
-
-  YesBranch = "|" "yes" ":" (YesNo | text)
-  NoBranch = "|" "no" ":" (YesNo | text)
-
-  text = char+
-  
+dt2 {
+  Main = Choice
+  Choice = "[" Predicate "|" "yes" ":" Branch "|" "no" ":" Branch "]"
+  Branch = Choice | Action
+  Predicate = function_call 
+  Action = function_call
+  function_call = char+
   char =
     | "\n" -- newline
     | "?" -- questionmark
