@@ -1,36 +1,36 @@
 if (found) {
-    if (%incompilingstate()) {
+    if (%incompilingstate) {
         if (foundimmediate) {
-            @exec(item)
+            λexec(item)
         } else {
-            @compileword(item)
+            λcompileword(item)
         }
         
     } else {
-        @exec(item)
+        λexec(item)
     }
     
 } else {
-    if (%incompilingstate()) {
+    if (%incompilingstate) {
         if (%isinteger(item)) {
-            @compileinteger(item)
+            λcompileinteger(item)
         } else {
             if (%isfloat(item)) {
-                @compilefloat(item)
+                λcompilefloat(item)
             } else {
-                %returnFalse
+                @returnFalse
             }
             
         }
         
     } else {
         if (%isinteger(item)) {
-            @pushasinteger(item)
+            λpushasinteger(item)
         } else {
             if (%isfloat(item)) {
-                @pushasfloat(item)
+                λpushasfloat(item)
             } else {
-                %returnFalse
+                @returnFalse
             }
             
         }

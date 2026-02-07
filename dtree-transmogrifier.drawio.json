@@ -206,11 +206,11 @@
         "id": 8
       },
       {
-        "name": ":$ _/t2t dt2 dt2js",
+        "name": ":$ _/t2t dt dtjs",
         "id": 12
       },
       {
-        "name": ":$ _/t2t dt2 dt2pretty",
+        "name": ":$ _/t2t dt dtpretty",
         "id": 16
       },
       {
@@ -222,7 +222,7 @@
         "id": 24
       },
       {
-        "name": ":$ _/t2t dt2 dt2py",
+        "name": ":$ _/t2t dt dtpy",
         "id": 28
       },
       {
@@ -230,7 +230,7 @@
         "id": 32
       },
       {
-        "name": ":$ _/t2t dt2 dt2frish",
+        "name": ":$ _/t2t dt dtfrish",
         "id": 36
       },
       {
@@ -240,10 +240,6 @@
       {
         "name": "🚫",
         "id": 44
-      },
-      {
-        "name": ":?A",
-        "id": 47
       }
     ],
     "connections": [
@@ -265,7 +261,7 @@
           "id": 8
         },
         "target": {
-          "name": ":$ _/t2t dt2 dt2js",
+          "name": ":$ _/t2t dt dtjs",
           "id": 12
         }
       },
@@ -278,7 +274,7 @@
           "id": 8
         },
         "target": {
-          "name": ":$ _/t2t dt2 dt2pretty",
+          "name": ":$ _/t2t dt dtpretty",
           "id": 16
         }
       },
@@ -287,7 +283,7 @@
         "source_port": "",
         "target_port": "",
         "source": {
-          "name": ":$ _/t2t dt2 dt2js",
+          "name": ":$ _/t2t dt dtjs",
           "id": 12
         },
         "target": {
@@ -300,7 +296,7 @@
         "source_port": "",
         "target_port": "",
         "source": {
-          "name": ":$ _/t2t dt2 dt2pretty",
+          "name": ":$ _/t2t dt dtpretty",
           "id": 16
         },
         "target": {
@@ -313,7 +309,7 @@
         "source_port": "✗",
         "target_port": "",
         "source": {
-          "name": ":$ _/t2t dt2 dt2js",
+          "name": ":$ _/t2t dt dtjs",
           "id": 12
         },
         "target": {
@@ -365,7 +361,7 @@
         "source_port": "",
         "target_port": "",
         "source": {
-          "name": ":$ _/t2t dt2 dt2frish",
+          "name": ":$ _/t2t dt dtfrish",
           "id": 36
         },
         "target": {
@@ -382,7 +378,7 @@
           "id": 8
         },
         "target": {
-          "name": ":$ _/t2t dt2 dt2py",
+          "name": ":$ _/t2t dt dtpy",
           "id": 28
         }
       },
@@ -395,7 +391,7 @@
           "id": 8
         },
         "target": {
-          "name": ":$ _/t2t dt2 dt2frish",
+          "name": ":$ _/t2t dt dtfrish",
           "id": 36
         }
       },
@@ -404,7 +400,7 @@
         "source_port": "✗",
         "target_port": "",
         "source": {
-          "name": ":$ _/t2t dt2 dt2frish",
+          "name": ":$ _/t2t dt dtfrish",
           "id": 36
         },
         "target": {
@@ -417,7 +413,7 @@
         "source_port": "",
         "target_port": "",
         "source": {
-          "name": ":$ _/t2t dt2 dt2py",
+          "name": ":$ _/t2t dt dtpy",
           "id": 28
         },
         "target": {
@@ -456,7 +452,7 @@
         "source_port": "✗",
         "target_port": "",
         "source": {
-          "name": ":$ _/t2t dt2 dt2py",
+          "name": ":$ _/t2t dt dtpy",
           "id": 28
         },
         "target": {
@@ -469,25 +465,12 @@
         "source_port": "✗",
         "target_port": "",
         "source": {
-          "name": ":$ _/t2t dt2 dt2pretty",
+          "name": ":$ _/t2t dt dtpretty",
           "id": 16
         },
         "target": {
           "name": "🚫",
           "id": 44
-        }
-      },
-      {
-        "dir": 1,
-        "source_port": "",
-        "target_port": "",
-        "source": {
-          "name": ":$ swipl tree_walk.pl",
-          "id": 8
-        },
-        "target": {
-          "name": ":?A",
-          "id": 47
         }
       },
       {

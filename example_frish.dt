@@ -1,47 +1,47 @@
 [ found?
     |yes:
         
-        [ %incompilingstate()?
+        [ %incompilingstate?
             |yes:
                 
                 [ foundimmediate?
                     |yes:
-                        @exec(item)
+                        λexec(item)
                     |no:
-                        @compileword(item)
+                        λcompileword(item)
                 ]
         |no:
-            @exec(item)
+            λexec(item)
     ]
 |no:
     
-    [ %incompilingstate()?
+    [ %incompilingstate?
         |yes:
             
             [ %isinteger(item)?
                 |yes:
-                    @compileinteger(item)
+                    λcompileinteger(item)
                 |no:
                     
                     [ %isfloat(item)?
                         |yes:
-                            @compilefloat(item)
+                            λcompilefloat(item)
                         |no:
-                            %returnFalse
+                            @returnFalse
                     ]
         ]
 |no:
     
     [ %isinteger(item)?
         |yes:
-            @pushasinteger(item)
+            λpushasinteger(item)
         |no:
             
             [ %isfloat(item)?
                 |yes:
-                    @pushasfloat(item)
+                    λpushasfloat(item)
                 |no:
-                    %returnFalse
+                    @returnFalse
             ]
 ]
 ]

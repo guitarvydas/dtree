@@ -1,22 +1,22 @@
 if (found_p ()) {
-    if (incompilingstate()_p ()) {
+    if (incompilingstate_p ()) {
         if (foundimmediate_p ()) {
-            return exec(item);
+            return λexec(item);
         } else {
-            return compileword(item);
+            return λcompileword(item);
         }
         
     } else {
-        return exec(item);
+        return λexec(item);
     }
     
 } else {
-    if (incompilingstate()_p ()) {
+    if (incompilingstate_p ()) {
         if (isinteger(item)_p ()) {
-            return compileinteger(item);
+            return λcompileinteger(item);
         } else {
             if (isfloat(item)_p ()) {
-                return compilefloat(item);
+                return λcompilefloat(item);
             } else {
                 return returnFalse;
             }
@@ -25,10 +25,10 @@ if (found_p ()) {
         
     } else {
         if (isinteger(item)_p ()) {
-            return pushasinteger(item);
+            return λpushasinteger(item);
         } else {
             if (isfloat(item)_p ()) {
-                return pushasfloat(item);
+                return λpushasfloat(item);
             } else {
                 return returnFalse;
             }
