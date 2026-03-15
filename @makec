@@ -1,0 +1,57 @@
+#!/bin/bash
+# convert dtree tool diagram to JSON
+${PBP}/das2json dtree-transmogrifier.drawio
+
+# there are slightly different diagrams for each of the 3 targets
+# (the text in the diagrams is written in the target language)
+
+echo  'target=frish'
+# frish is a meta-language that gets transmogrified to Python by the calling "frish" project
+fname=example_frish
+# run the tool on the given filename
+python main.py "${PBPCALLER}/${fname}.drawio" main dtree-transmogrifier.drawio.json | ${PBP}/splitoutputs
+## move results to caller's working directory, if no errors
+if [ -f out.✗ ]
+then
+    echo
+    echo ">> ERROR <<"
+    cat out.✗
+else
+    mv out.frish "${PBPCALLER}/${fname}.frish"
+    mv out.dt "${PBPCALLER}/${fname}.dt"
+    rm -f out.js out.py # generated from wrong diagram
+fi
+
+echo 'target=python'
+# example demonstrating Python output
+fname=example_py
+# run the tool on the given filename
+python main.py "${PBPCALLER}/${fname}.drawio" main dtree-transmogrifier.drawio.json | ${PBP}/splitoutputs
+## move results to caller's working directory, if no errors
+if [ -f out.✗ ]
+then
+    echo
+    echo ">> ERROR <<"
+    cat out.✗
+else
+    mv out.py "${PBPCALLER}/${fname}.py"
+    rm -f out.*
+fi
+
+echo 'target=JavaScript'
+# example demonstrating Javascript output
+fname=example_js
+# run the tool on the given filename
+python main.py "${PBPCALLER}/${fname}.drawio" main dtree-transmogrifier.drawio.json | ${PBP}/splitoutputs
+## move results to caller's working directory, if no errors
+if [ -f out.✗ ]
+then
+    echo
+    echo ">> ERROR <<"
+    cat out.✗
+else
+    mv out.js "${PBPCALLER}/${fname}.js"
+    rm -f out.*
+fi
+
+rm -rf temp*

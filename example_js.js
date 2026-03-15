@@ -1,6 +1,6 @@
-if (found) {
-    if (incompilingstate) {
-        if (foundimmediate) {
+if (found ()) {
+    if (incompilingstate ()) {
+        if (foundimmediate ()) {
             return exec(item);
         } else {
             return compileword(item);
@@ -11,11 +11,11 @@ if (found) {
     }
     
 } else {
-    if (incompilingstate) {
-        if (isinteger(item)) {
+    if (incompilingstate ()) {
+        if (isinteger(item) ()) {
             return compileinteger(item);
         } else {
-            if (isfloat(item)) {
+            if (isfloat(item) ()) {
                 return compilefloat(item);
             } else {
                 return fail();
@@ -24,10 +24,10 @@ if (found) {
         }
         
     } else {
-        if (isinteger(item)) {
+        if (isinteger(item) ()) {
             return pushasinteger(item);
         } else {
-            if (isfloat(item)) {
+            if (isfloat(item) ()) {
                 return pushasfloat(item);
             } else {
                 return fail();
