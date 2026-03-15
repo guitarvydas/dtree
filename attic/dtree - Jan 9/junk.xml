@@ -1,0 +1,11 @@
+&lt;div&gt;
+&lt;/div&gt;
+&lt;span.*/span&gt;
+
+
+[ found? | yes: [ %inCompilingState()? | yes: [ foundImmediate? | yes: exec(xt) | no: compileword(
+
+&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;
+xt)
+
+&lt;/span&gt; ] | no: exec(xt) ] | no: [ %inCompilingState()? | yes: [ %isInteger(item)&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;?&lt;/span&gt; | yes: compileInt(item) | no: [ float? | yes: compileFloat(item) | no: %rerror() ] ] | no: [ %isInteger(item)? | yes: pushAsInt(item) | no: [ float? | yes: pushAsFloat(item) | no: %rerror() ] ] ] ]
