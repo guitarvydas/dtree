@@ -1032,5 +1032,43 @@
       }
     ],
     "file": "dtree-transmogrifier.drawio"
+  },
+  {
+    "name": "db1",
+    "children": [
+      {
+        "name": ":?A",
+        "id": 3
+      },
+      {
+        "name": ":1",
+        "id": 5
+      }
+    ],
+    "connections": [
+      {
+        "dir": 0,
+        "source_port": "",
+        "target_port": "",
+        "target": {
+          "name": ":1",
+          "id": 5
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":1",
+          "id": 5
+        },
+        "target": {
+          "name": ":?A",
+          "id": 3
+        }
+      }
+    ],
+    "file": "dtree-transmogrifier.drawio"
   }
 ]
