@@ -68,7 +68,7 @@ PBP is a hybrid language which uses, both, diagrams and text code. Text code par
 
 The front end of the generator (everything up to `:$ swipl tree_walk.pl` in the `Transmogrify DT` tab), is common to all code generators. The output of the front end is a little text language - intermediate code - that is used by each of the four generators `dtfrish`, `dtpy`, `dtjs` and `dtpretty` to generate code specific to each target language.
 
-![dtree transmogrifier IR to four code generators](dtree-transmogrifier-Transmogrify DT.drawio.png)
+![dtree transmogrifier IR to four code generators](dtree-transmogrifier-Transmogrify-DT.drawio.png)
 
 For expository purposes, I save out the `frish` version of the `.dt` IR to the file `example_frish.dt`.
 
