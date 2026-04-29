@@ -76,6 +76,7 @@ Each of the four code generators uses the `T2T` tools (included in the repo). Ge
 1. inhale and parse the IR using `OhmJS`. You can browse the grammar rules by loading the `.ohm` files into a programming editor.
 2. transmogrify the IR code into code destined for each target language using `.rwr` (ReWRite, a little DSL (also written in OhmJS)). You can browse the rewrite rules by loading the `.rwr` files into a programming text editor.
 
+Note, also, that the final step in the front end `:$ swipl tree_walk.pl` uses the SWI Prolog compiler. The `tree_walk.pl` code does some inferencing which could have been done using any more popular language containing loops, but, Prolog syntax is better for this kind of thing -- and -- the point was to make this tool easy and quick to build.
 
 # Video Playlist
 
