@@ -39,6 +39,7 @@ else:
 
 # usage
 ## top level
+`./@install` (first time only)
 `@make`
 ## as a sub-project
 `@make <$1> <$2> <$3>`
