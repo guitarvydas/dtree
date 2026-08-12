@@ -1070,5 +1070,16 @@
       }
     ],
     "file": "dtree-transmogrifier.drawio"
+  },
+  {
+    "name": "abort-part",
+    "children": [
+      {
+        "name": "🚫",
+        "id": 2
+      }
+    ],
+    "connections": [],
+    "file": "dtree-transmogrifier.drawio"
   }
 ]
