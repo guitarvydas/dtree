@@ -20,6 +20,9 @@ then
 else
     mv out.frish "${PBPCALLER}/${fname}.frish"
     mv out.dt "${PBPCALLER}/${fname}.dt"
+    echo
+    echo "*** look at ${PBPCALLER}/${fname}.dt if interested"
+    echo
     rm -f out.js out.py # generated from wrong diagram
 fi
 export T2TVERBOSE=
@@ -39,6 +42,7 @@ then
 else
     mv out.py "${PBPCALLER}/${fname}.py"
     rm -f out.*
+    cat "${PBPCALLER}/${fname}.py"
 fi
 
 echo 'target=JavaScript'
@@ -55,6 +59,9 @@ then
     exit 1
 else
     mv out.js "${PBPCALLER}/${fname}.js"
+    echo
+    echo "*** look at ${PBPCALLER}/${fname}.js if interested"
+    echo
     rm -f out.*
 fi
 
