@@ -58,18 +58,3 @@ find_branch(SourceId, BranchValue, Cells, TargetNode) :-
     TargetNode.id = TargetId,
     is_decision_node(TargetNode),
     !.
-
-find_branch(SourceId, BranchValue, Cells, TargetNode) :-
-    member(Edge, Cells),
-    get_dict(source, Edge, SourceId),
-    get_dict(kind, Edge, "edge"),
-    get_dict(id, Edge, EdgeId),
-    get_dict(target, Edge, TargetId),
-    member(Label, Cells),
-    get_dict(kind, Label, "branchLabel"),
-    get_dict(parent, Label, EdgeId),
-    get_dict(branch, Label, BranchValue),
-    member(TargetNode, Cells),
-    TargetNode.id = TargetId,
-    is_decision_node(TargetNode),
-    !.
